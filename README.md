@@ -1,6 +1,6 @@
 # iOS APP
 ## By Chester Chen
-## Some iOS APP by Chester Chen
+## Some iOS APP by Chester Chen, learning from the videos of Itcast Inc.
 ## July 18th, 2016 - July 25th, 2016
 
 ### Contents
