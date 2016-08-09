@@ -1,7 +1,7 @@
 # iOS APP
 ## By Chester Chen
 ## Some iOS APP by Chester Chen, learning from the videos of Itcast Inc.
-## July 18th, 2016 - August 7th, 2016
+## July 18th, 2016 - August 9th, 2016
 
 ### Contents
 
@@ -21,3 +21,4 @@
 - [APP 14. 应用下载](CCAppDownload)
 - [APP 15. 点菜菜单](CCOrderFood)
 - [APP 16. 注册界面](CCRegisterInterface)
+- [APP 17. 导航使用](CCNavigationUse)
