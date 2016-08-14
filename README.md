@@ -1,7 +1,7 @@
 # iOS APP
 ## By Chester Chen
 ## Some iOS APP by Chester Chen, learning from the videos of Itcast Inc.
-## July 18th, 2016 - August 13th, 2016
+## July 18th, 2016 - August 14th, 2016
 
 ### Contents
 
@@ -26,3 +26,4 @@
 - [APP 19. 个人通讯录](CCPersonalContacts)
 - [APP 20. QQ框架](CCQQFramework)
 - [APP 21. Quartz2D使用](CCQuartz2DUse)
+- [APP 22. 小黄人绘制](CCMinionsDraw)
