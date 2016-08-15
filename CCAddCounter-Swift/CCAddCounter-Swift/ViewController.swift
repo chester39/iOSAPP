@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         setupUI()
     }
     
-    // MARK: - 初始化方法
+    // MARK: - 界面方法
     
     /**
      初始化界面方法
@@ -103,7 +103,7 @@ class ViewController: UIViewController {
     }
     
     /**
-     加法计算器
+     加法计算方法
      */
     func addCounter() {
         let a: Int = Int(numberA.text!) ?? 0
