@@ -8,17 +8,11 @@
 
 @interface ViewController ()
 
-/**
- *  加数A文本框
- */
+// 加数文本框
 @property (weak, nonatomic) IBOutlet UITextField *numberA;
-/**
- *  加数B文本框
- */
+// 被加数文本框
 @property (weak, nonatomic) IBOutlet UITextField *numberB;
-/**
- *  和标签
- */
+// 加法和标签
 @property (weak, nonatomic) IBOutlet UILabel *sumAnswer;
 
 @end
