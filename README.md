@@ -5,9 +5,10 @@
 
 ### Contents
 
-- [APP 1. 加法计算器](CCAddCounter) *made by storyboard and Objective-C*
-- [APP 1. 加法计算器](CCAddCounter-Swift) *made by code and Swift*
-- [APP 2. 按钮使用](CCButtonUse)
+- [APP 1.1 加法计算器](CCAddCounter) *made by storyboard and Objective-C*
+- [APP 1.2 加法计算器](CCAddCounter-Swift) *made by code and Swift*
+- [APP 2.1 按钮使用](CCButtonUse) *made by storyboard and Objective-C*
+- [APP 2.2 按钮使用](CCButtonUse-Swift) *made by code and Swift*
 - [APP 3. 图片浏览器](CCImageExplorer)
 - [APP 4. 汤姆猫](CCTomCat)
 - [APP 5. 应用管理](CCAppControl)
