@@ -1,9 +1,7 @@
 //
-//  AppDelegate.swift
-//  CCAddCounter-Swift
-//
-//  Created by Chester Chen on 16/8/15.
-//  Copyright © 2016年 Chen Chen. All rights reserved.
+//	iOS培训
+//		传智播客 & 黑马
+//		Chen Chen @ August 15th, 2016
 //
 
 import UIKit

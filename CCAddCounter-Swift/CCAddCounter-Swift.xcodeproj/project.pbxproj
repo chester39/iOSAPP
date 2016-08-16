@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25115FD41D62B4E200EAE3F9 /* AddCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25115FD31D62B4E200EAE3F9 /* AddCounterView.swift */; };
 		73E90C6DD2D8DFDBD583075C /* Pods_CCAddCounter_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DEBEAC6161BC08E1877EE1 /* Pods_CCAddCounter_Swift.framework */; };
 		865D33891D6210D0002F3A32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865D33881D6210D0002F3A32 /* AppDelegate.swift */; };
 		865D338B1D6210D0002F3A32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865D338A1D6210D0002F3A32 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		24DEBEAC6161BC08E1877EE1 /* Pods_CCAddCounter_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCAddCounter_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25115FD31D62B4E200EAE3F9 /* AddCounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCounterView.swift; sourceTree = "<group>"; };
 		3656258DA570C2153ACC7F0D /* Pods-CCAddCounter-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCAddCounter-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCAddCounter-Swift/Pods-CCAddCounter-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		865D33851D6210D0002F3A32 /* CCAddCounter-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CCAddCounter-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		865D33881D6210D0002F3A32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			children = (
 				865D33881D6210D0002F3A32 /* AppDelegate.swift */,
 				865D338A1D6210D0002F3A32 /* ViewController.swift */,
+				25115FD31D62B4E200EAE3F9 /* AddCounterView.swift */,
 				865D338F1D6210D0002F3A32 /* Assets.xcassets */,
 				865D33911D6210D0002F3A32 /* LaunchScreen.storyboard */,
 				865D33941D6210D0002F3A32 /* Info.plist */,
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				865D338B1D6210D0002F3A32 /* ViewController.swift in Sources */,
+				25115FD41D62B4E200EAE3F9 /* AddCounterView.swift in Sources */,
 				865D33891D6210D0002F3A32 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

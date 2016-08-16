@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CCAddCounter-Swift.xcscheme</key>
+		<key>CCAddCounter.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>865D33841D6210D0002F3A32</key>
+		<key>86F2C1ED1ADD0E0C0085ED42</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>86F2C2061ADD0E0C0085ED42</key>
 		<dict>
 			<key>primary</key>
 			<true/>

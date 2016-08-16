@@ -39,6 +39,7 @@
     NSInteger a = [self.numberA.text integerValue];
     NSInteger b = [self.numberB.text integerValue];
     self.sumAnswer.text = [NSString stringWithFormat:@"%ld", a + b];
+    
     [self.view endEditing:YES];
 }
 

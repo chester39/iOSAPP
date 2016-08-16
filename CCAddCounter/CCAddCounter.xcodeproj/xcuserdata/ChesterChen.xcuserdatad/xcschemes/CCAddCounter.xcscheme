@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "865D33841D6210D0002F3A32"
-               BuildableName = "CCAddCounter-Swift.app"
-               BlueprintName = "CCAddCounter-Swift"
-               ReferencedContainer = "container:CCAddCounter-Swift.xcodeproj">
+               BlueprintIdentifier = "86F2C1ED1ADD0E0C0085ED42"
+               BuildableName = "CCAddCounter.app"
+               BlueprintName = "CCAddCounter"
+               ReferencedContainer = "container:CCAddCounter.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,14 +28,24 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "86F2C2061ADD0E0C0085ED42"
+               BuildableName = "CCAddCounterTests.xctest"
+               BlueprintName = "CCAddCounterTests"
+               ReferencedContainer = "container:CCAddCounter.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "865D33841D6210D0002F3A32"
-            BuildableName = "CCAddCounter-Swift.app"
-            BlueprintName = "CCAddCounter-Swift"
-            ReferencedContainer = "container:CCAddCounter-Swift.xcodeproj">
+            BlueprintIdentifier = "86F2C1ED1ADD0E0C0085ED42"
+            BuildableName = "CCAddCounter.app"
+            BlueprintName = "CCAddCounter"
+            ReferencedContainer = "container:CCAddCounter.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +65,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "865D33841D6210D0002F3A32"
-            BuildableName = "CCAddCounter-Swift.app"
-            BlueprintName = "CCAddCounter-Swift"
-            ReferencedContainer = "container:CCAddCounter-Swift.xcodeproj">
+            BlueprintIdentifier = "86F2C1ED1ADD0E0C0085ED42"
+            BuildableName = "CCAddCounter.app"
+            BlueprintName = "CCAddCounter"
+            ReferencedContainer = "container:CCAddCounter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +84,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "865D33841D6210D0002F3A32"
-            BuildableName = "CCAddCounter-Swift.app"
-            BlueprintName = "CCAddCounter-Swift"
-            ReferencedContainer = "container:CCAddCounter-Swift.xcodeproj">
+            BlueprintIdentifier = "86F2C1ED1ADD0E0C0085ED42"
+            BuildableName = "CCAddCounter.app"
+            BlueprintName = "CCAddCounter"
+            ReferencedContainer = "container:CCAddCounter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
