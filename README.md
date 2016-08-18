@@ -1,7 +1,7 @@
 # iOS APP
 ## By Chester Chen
 ## Some iOS APP by Chester Chen, learning from the videos of Itcast Inc.
-## July 18th, 2016 - August 17th, 2016
+## July 18th, 2016 - August 18th, 2016
 
 ### Contents
 
@@ -31,3 +31,4 @@
 - [APP 22. 小黄人绘制](CCMinionsDraw)
 - [APP 23. 涂鸦画板](CCDoodlePainter)
 - [APP 24. 手势解锁](CCGestureUnlock)
+- [APP 25. 手势识别器](CCGestureRecognizer)
