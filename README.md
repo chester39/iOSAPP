@@ -1,7 +1,7 @@
 # iOS App
 ## By Chester Chen
 ## Some iOS App by Chester Chen, learning from the videos of Itcast Inc.
-## July 18th, 2016 - August 23rd, 2016
+## July 18th, 2016 - August 25th, 2016
 
 ### Contents
 
@@ -37,4 +37,5 @@
 - [App 28. 抽屉视图](CCDrawerView)
 - [App 29. NSThread使用](CCNSThreadUse)
 - [App 30. GCD使用](CCGCDUse)
+- [App 31. NSOperation使用](CCNSOperationUse)
 
