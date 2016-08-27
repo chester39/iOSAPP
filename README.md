@@ -38,5 +38,7 @@
 - [App 29. NSThread使用](CCNSThreadUse)
 - [App 30. GCD使用](CCGCDUse)
 - [App 31. NSOperation使用](CCNSOperationUse)
-- [App32. 应用信息](CCAppInformation)
+- [App 32. 应用信息](CCAppInformation)
+- [App 33. HTTP请求](CCHTTPRequest)
+
 
