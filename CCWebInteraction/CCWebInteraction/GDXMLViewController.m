@@ -1,0 +1,122 @@
+//
+//	iOS培训
+//		传智播客 & 黑马
+//		Chen Chen @ July 22nd, 2015
+//
+
+#import "GDXMLViewController.h"
+#import "VideoModel.h"
+#import <MediaPlayer/MediaPlayer.h>
+#import "GDataXMLNode.h"
+#import "UIImageView+WebCache.h"
+
+/**
+ *  视频URL地址
+ */
+#define CCVideoURL(path) [NSURL URLWithString:[NSString stringWithFormat:@"http://192.168.1.110:8080/MJServer/%@", path]]
+
+@interface GDXMLViewController ()
+
+/**
+ *  视频数组
+ */
+@property (strong, nonatomic) NSMutableArray *videoArray;
+
+@end
+
+@implementation GDXMLViewController
+
+#pragma mark - 初始化方法
+
+/**
+ *  视频数组惰性初始化方法
+ */
+- (NSMutableArray *)videoArray
+{
+    if (_videoArray == nil) {
+        _videoArray = [[NSMutableArray alloc] init];
+    }
+    return _videoArray;
+}
+
+#pragma mark - 系统方法
+
+/**
+ *  视图已经加载方法
+ */
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    NSURL *url = CCVideoURL(@"video?type=XML");
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (connectionError || data == nil) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"通知" message:@"请求失败" delegate:self cancelButtonTitle:@"确认" otherButtonTitles:nil];
+            [alertView show];
+            return;
+        }
+        GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:data options:0 error:nil];
+        GDataXMLElement *root = doc.rootElement;
+        NSArray *elements = [root elementsForName:@"video"];
+        for (GDataXMLElement *videoElement in elements) {
+            VideoModel *video = [[VideoModel alloc] init];
+            video.id = [videoElement attributeForName:@"id"].stringValue.intValue;
+            video.image = [videoElement attributeForName:@"image"].stringValue;
+            video.length = [videoElement attributeForName:@"length"].stringValue.intValue;
+            video.name = [videoElement attributeForName:@"name"].stringValue;
+            video.url = [videoElement attributeForName:@"url"].stringValue;
+            [self.videoArray addObject:video];
+        }
+        [self.tableView reloadData];
+    }];
+}
+
+#pragma mark - UITableViewDataSource数据源方法
+
+/**
+ *  共有组数方法
+ */
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+/**
+ *  每组行数方法
+ */
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.videoArray.count;
+}
+
+/**
+ *  每行内容方法
+ */
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *ID = @"VIDEO";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (cell == nil)
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+    VideoModel *video = self.videoArray[indexPath.row];
+    cell.textLabel.text = video.name;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"视频时长：%d分钟", video.length];
+    NSURL *url = CCVideoURL(video.image);
+    [cell.imageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"Placeholder"]];
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate代理方法
+
+/**
+ *  选中行方法
+ */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    VideoModel *video = self.videoArray[indexPath.row];
+    NSURL *url = CCVideoURL(video.url);
+    MPMoviePlayerViewController *playervc = [[MPMoviePlayerViewController alloc] initWithContentURL:url];
+    [self presentViewController:playervc animated:YES completion:nil];
+}
+
+@end
