@@ -1,10 +1,11 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
+//	AddCounterView.swift
+//		CCAddCounter
 //		Chen Chen @ August 16th, 2016
 //
 
 import UIKit
+
 import Cartography
 
 class AddCounterView: UIView {
@@ -12,13 +13,13 @@ class AddCounterView: UIView {
     // 加数文本框
     var numberA = UITextField()
     // 加号标签
-    private var plusSign = UILabel()
+    private var plusSign = UILabel(text: "+", fontSize: 17, lines: 1)
     // 被加数文本框
     var numberB = UITextField()
     // 等号标签
-    private var equalSign = UILabel()
+    private var equalSign = UILabel(text: "=", fontSize: 17, lines: 1)
     // 加法和标签
-    var sumAnswer = UILabel()
+    var sumAnswer = UILabel(text: "0", fontSize: 17, lines: 0)
     // 加法按钮
     var addButton = UIButton()
     
@@ -35,7 +36,7 @@ class AddCounterView: UIView {
     }
     
     /**
-     XIB初始化方法
+     数据解码XIB初始化方法
      */
     required init?(coder aDecoder: NSCoder) {
         
@@ -54,7 +55,6 @@ class AddCounterView: UIView {
         numberA.adjustsFontSizeToFitWidth = true
         addSubview(numberA)
         
-        plusSign.text = "+"
         addSubview(plusSign)
         
         numberB.placeholder = "数字B"
@@ -62,10 +62,8 @@ class AddCounterView: UIView {
         numberB.adjustsFontSizeToFitWidth = true
         addSubview(numberB)
         
-        equalSign.text = "="
         addSubview(equalSign)
         
-        sumAnswer.text = "0"
         sumAnswer.textAlignment = NSTextAlignment.Center
         addSubview(sumAnswer)
         
@@ -74,37 +72,37 @@ class AddCounterView: UIView {
         addSubview(addButton)
         
         constrain(numberA, plusSign, numberB) { (numberA, plusSign, numberB) in
-            numberA.width == 60
-            numberA.height == 30
-            numberA.top == numberA.superview!.top + 100
-            numberA.left == numberA.superview!.left + 20
+            numberA.width == kViewAdapter
+            numberA.height == kViewMargin
+            numberA.top == numberA.superview!.top + kViewStandard
+            numberA.left == numberA.superview!.left + kViewBorder
             
-            plusSign.width == 20
-            plusSign.height == 20
+            plusSign.width == kViewBorder
+            plusSign.height == kViewBorder
             
-            numberB.width == 60
-            numberB.height == 30
+            numberB.width == kViewAdapter
+            numberB.height == kViewMargin
             
             align(centerY: numberA, plusSign, numberB)
-            distribute(by: 20, leftToRight: numberA, plusSign, numberB)
+            distribute(by: kViewBorder, leftToRight: numberA, plusSign, numberB)
         }
         
         constrain(sumAnswer, equalSign) { (sumAnswer, equalSign) in
-            sumAnswer.width == 50
-            sumAnswer.height == 30
-            sumAnswer.top == sumAnswer.superview!.top + 100
-            sumAnswer.right == sumAnswer.superview!.right - 20
+            sumAnswer.width == kViewAdapter
+            sumAnswer.height == kViewMargin
+            sumAnswer.top == sumAnswer.superview!.top + kViewStandard
+            sumAnswer.right == sumAnswer.superview!.right - kViewBorder
             
-            equalSign.width == 20
-            equalSign.height == 20
+            equalSign.width == kViewBorder
+            equalSign.height == kViewBorder
             
             align(centerY: sumAnswer, equalSign)
-            distribute(by: 20, leftToRight: equalSign, sumAnswer)
+            distribute(by: kViewBorder, leftToRight: equalSign, sumAnswer)
         }
         
         constrain(addButton) { (addButton) in
-            addButton.width == 100
-            addButton.height == 50
+            addButton.width == kViewStandard
+            addButton.height == kViewAdapter
             addButton.center == addButton.superview!.center
         }
     }

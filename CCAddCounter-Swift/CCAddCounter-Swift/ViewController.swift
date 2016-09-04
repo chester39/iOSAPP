@@ -1,6 +1,6 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
+//	ViewController.swift
+//		CCAddCounter
 //		Chen Chen @ August 15th, 2016
 //
 
@@ -9,7 +9,7 @@ import UIKit
 class ViewController: UIViewController {
 
     // 加法计算视图
-    var addCounterView = AddCounterView(frame: UIScreen.mainScreen().bounds)
+    var addCounterView = AddCounterView(frame: kScreenFrame)
     
     // MARK: - 系统方法
     
@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
-        view = addCounterView
+        view.addSubview(addCounterView)
         addCounterView.addButton.addTarget(self, action: #selector(addCounter), forControlEvents: UIControlEvents.TouchUpInside)
     }
     
@@ -30,6 +30,7 @@ class ViewController: UIViewController {
      加法计算方法
      */
     func addCounter() {
+        
         let a: Int = Int(addCounterView.numberA.text!) ?? 0
         let b: Int = Int(addCounterView.numberB.text!) ?? 0
         addCounterView.sumAnswer.text = String(a + b)

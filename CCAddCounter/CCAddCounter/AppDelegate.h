@@ -1,6 +1,6 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
+//	AppDelegate.h
+//		CCAddCounter
 //		Chen Chen @ Apirl 12th, 2015
 //
 
@@ -11,4 +11,3 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @end
-

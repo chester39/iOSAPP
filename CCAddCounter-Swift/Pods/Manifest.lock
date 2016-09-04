@@ -1,12 +1,12 @@
 PODS:
-  - Cartography (0.5.0)
+  - Cartography (0.6.0)
 
 DEPENDENCIES:
-  - Cartography (~> 0.5.0)
+  - Cartography (~> 0.6.0)
 
 SPEC CHECKSUMS:
-  Cartography: 774e5cc446f5a6bca5d4345c5aa6af9a1fe74dc6
+  Cartography: 70af183a248547694a8cfaa6b989cb7e04589985
 
-PODFILE CHECKSUM: ffcd2202d34d47c5f946cffb5d34779f7e68d488
+PODFILE CHECKSUM: 6fca40c3ce15be24cf0f4af8938ca46a3e4c7585
 
 COCOAPODS: 1.0.1

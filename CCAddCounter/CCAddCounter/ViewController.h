@@ -1,6 +1,6 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
+//	ViewController.h
+//		CCAddCounter
 //		Chen Chen @ Apirl 12th, 2015
 //
 
@@ -9,4 +9,3 @@
 @interface ViewController : UIViewController
 
 @end
-

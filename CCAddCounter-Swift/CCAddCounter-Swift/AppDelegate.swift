@@ -1,6 +1,6 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
+//	AppDelegate.swift
+//		CCAddCounter
 //		Chen Chen @ August 15th, 2016
 //
 
@@ -67,4 +67,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
 }
-

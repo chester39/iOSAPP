@@ -1,6 +1,6 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
+//	ViewController.m
+//		CCAddCounter
 //		Chen Chen @ Apirl 12th, 2015
 //
 
@@ -24,8 +24,8 @@
 /**
  *  视图已经加载方法
  */
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
+    
     [super viewDidLoad];
 }
 
@@ -34,8 +34,8 @@
 /**
  *  加法计算方法
  */
-- (IBAction)addCounter
-{
+- (IBAction)addCounter {
+    
     NSInteger a = [self.numberA.text integerValue];
     NSInteger b = [self.numberB.text integerValue];
     self.sumAnswer.text = [NSString stringWithFormat:@"%ld", a + b];
