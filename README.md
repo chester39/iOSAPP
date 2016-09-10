@@ -1,7 +1,7 @@
 # iOS App
 ## By Chester Chen
 ## Some iOS App by Chester Chen, learning from the videos of Itcast Inc.
-## July 18th, 2016 - September 4th, 2016
+## July 18th, 2016 - September 10th, 2016
 
 ### Contents
 
@@ -44,5 +44,6 @@
 - [App 35. 文件下载](CCFileDownload)
 - [App 36. 网络下载](CCWebDownload)
 - [App 37. 文件上传](CCFileUpload)
+- [App 38. AFNetworking使用](CCAFNetworkingUse)
 
 
