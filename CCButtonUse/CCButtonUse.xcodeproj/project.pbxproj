@@ -60,33 +60,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		86CD67161B1CCE70006617B8 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				86CD67181B1CCE7E006617B8 /* Controllers */,
-				86CD67171B1CCE79006617B8 /* Others */,
-			);
-			name = Classes;
-			sourceTree = "<group>";
-		};
-		86CD67171B1CCE79006617B8 /* Others */ = {
-			isa = PBXGroup;
-			children = (
-				86D4FE521ADD1B2100DFFA9A /* AppDelegate.h */,
-				86D4FE531ADD1B2100DFFA9A /* AppDelegate.m */,
-			);
-			name = Others;
-			sourceTree = "<group>";
-		};
-		86CD67181B1CCE7E006617B8 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				86D4FE551ADD1B2100DFFA9A /* ViewController.h */,
-				86D4FE561ADD1B2100DFFA9A /* ViewController.m */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
 		86D4FE421ADD1B2100DFFA9A = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +81,10 @@
 		86D4FE4D1ADD1B2100DFFA9A /* CCButtonUse */ = {
 			isa = PBXGroup;
 			children = (
-				86CD67161B1CCE70006617B8 /* Classes */,
+				86D4FE521ADD1B2100DFFA9A /* AppDelegate.h */,
+				86D4FE531ADD1B2100DFFA9A /* AppDelegate.m */,
+				86D4FE551ADD1B2100DFFA9A /* ViewController.h */,
+				86D4FE561ADD1B2100DFFA9A /* ViewController.m */,
 				86D4FE4E1ADD1B2100DFFA9A /* Supporting Files */,
 			);
 			path = CCButtonUse;

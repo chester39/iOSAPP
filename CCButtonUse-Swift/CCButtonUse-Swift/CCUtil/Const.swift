@@ -1,6 +1,6 @@
 //
 //	Const.swift
-//		CCAddCounter
+//		CCButtonUse
 //		Chen Chen @ August 11th, 2016
 //
 

@@ -1,6 +1,6 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
+//	ViewController.swift
+//		CCButtonUse
 //		Chen Chen @ August 16th, 2016
 //
 
@@ -8,6 +8,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    /// 加法计算视图
+    var buttonUseView = ButtonUseView(frame: kScreenFrame)
+    
     // MARK: - 系统方法
     
     /**
@@ -17,7 +20,7 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
+        view = buttonUseView
     }
-
 }
 

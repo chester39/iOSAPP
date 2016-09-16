@@ -8,7 +8,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    // 加法计算视图
+    /// 加法计算视图
     var addCounterView = AddCounterView(frame: kScreenFrame)
     
     // MARK: - 系统方法
@@ -20,8 +20,8 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
-        view.addSubview(addCounterView)
-        addCounterView.addButton.addTarget(self, action: #selector(addCounter), forControlEvents: UIControlEvents.TouchUpInside)
+        view = addCounterView
+        addCounterView.addButton.addTarget(self, action: #selector(addCounter), forControlEvents: .TouchUpInside)
     }
     
     // MARK: - 界面方法

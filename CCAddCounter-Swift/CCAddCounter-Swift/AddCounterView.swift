@@ -10,17 +10,17 @@ import Cartography
 
 class AddCounterView: UIView {
     
-    // 加数文本框
+    /// 加数文本框
     var numberA = UITextField()
-    // 加号标签
+    /// 加号标签
     private var plusSign = UILabel(text: "+", fontSize: 17, lines: 1)
-    // 被加数文本框
+    /// 被加数文本框
     var numberB = UITextField()
-    // 等号标签
+    /// 等号标签
     private var equalSign = UILabel(text: "=", fontSize: 17, lines: 1)
-    // 加法和标签
+    /// 加法和标签
     var sumAnswer = UILabel(text: "0", fontSize: 17, lines: 0)
-    // 加法按钮
+    /// 加法按钮
     var addButton = UIButton()
     
     // MARK: - 初始化方法
@@ -33,6 +33,7 @@ class AddCounterView: UIView {
         super.init(frame: frame)
         
         setupUI()
+        setupConstraints()
     }
     
     /**
@@ -51,25 +52,31 @@ class AddCounterView: UIView {
     private func setupUI() {
         
         numberA.placeholder = "数字A"
-        numberA.borderStyle = UITextBorderStyle.RoundedRect
+        numberA.borderStyle = .RoundedRect
         numberA.adjustsFontSizeToFitWidth = true
         addSubview(numberA)
         
         addSubview(plusSign)
         
         numberB.placeholder = "数字B"
-        numberB.borderStyle = UITextBorderStyle.RoundedRect
+        numberB.borderStyle = .RoundedRect
         numberB.adjustsFontSizeToFitWidth = true
         addSubview(numberB)
         
         addSubview(equalSign)
         
-        sumAnswer.textAlignment = NSTextAlignment.Center
+        sumAnswer.textAlignment = .Center
         addSubview(sumAnswer)
         
-        addButton.setTitle("计算", forState: UIControlState.Normal)
-        addButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        addButton.setTitle("计算", forState: .Normal)
+        addButton.setTitleColor(MainColor, forState: .Normal)
         addSubview(addButton)
+    }
+    
+    /**
+     初始化约束方法
+     */
+    private func setupConstraints() {
         
         constrain(numberA, plusSign, numberB) { (numberA, plusSign, numberB) in
             numberA.width == kViewAdapter

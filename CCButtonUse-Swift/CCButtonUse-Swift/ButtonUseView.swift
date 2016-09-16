@@ -1,10 +1,11 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
+//	ButtonUseView.swift
+//		CCButtonUse
 //		Chen Chen @ August 16th, 2016
 //
 
 import UIKit
+
 import Cartography
 
 class ButtonUseView: UIView {
@@ -19,6 +20,7 @@ class ButtonUseView: UIView {
         super.init(frame: frame)
         
         setupUI()
+        setupConstraints()
     }
     
     /**
@@ -36,6 +38,13 @@ class ButtonUseView: UIView {
      */
     private func setupUI() {
         
+        
+    }
+    
+    /**
+     初始化约束方法
+     */
+    private func setupConstraints() {
         
     }
 

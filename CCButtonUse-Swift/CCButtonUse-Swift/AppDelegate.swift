@@ -1,6 +1,6 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
+//	AppDelegate.swift
+//		CCButtonUse
 //		Chen Chen @ August 16th, 2016
 //
 

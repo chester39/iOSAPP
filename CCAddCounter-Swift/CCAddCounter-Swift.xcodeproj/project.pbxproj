@@ -15,6 +15,7 @@
 		865D338B1D6210D0002F3A32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865D338A1D6210D0002F3A32 /* ViewController.swift */; };
 		865D33901D6210D0002F3A32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 865D338F1D6210D0002F3A32 /* Assets.xcassets */; };
 		865D33931D6210D0002F3A32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 865D33911D6210D0002F3A32 /* LaunchScreen.storyboard */; };
+		86A5578C1D8C462B00965D08 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A5578B1D8C462B00965D08 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		865D338F1D6210D0002F3A32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		865D33921D6210D0002F3A32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		865D33941D6210D0002F3A32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86A5578B1D8C462B00965D08 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		C650AD144FC4936ACEA80B5E /* Pods-CCAddCounter-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCAddCounter-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCAddCounter-Swift/Pods-CCAddCounter-Swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +66,7 @@
 		864DF4501D7C56CB00AD20D4 /* CCUtil */ = {
 			isa = PBXGroup;
 			children = (
+				86A5578B1D8C462B00965D08 /* Color.swift */,
 				864DF4511D7C56CB00AD20D4 /* Const.swift */,
 				864DF4521D7C56CB00AD20D4 /* Extension.swift */,
 			);
@@ -229,6 +232,7 @@
 				864DF4541D7C56CB00AD20D4 /* Extension.swift in Sources */,
 				865D33891D6210D0002F3A32 /* AppDelegate.swift in Sources */,
 				864DF4531D7C56CB00AD20D4 /* Const.swift in Sources */,
+				86A5578C1D8C462B00965D08 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

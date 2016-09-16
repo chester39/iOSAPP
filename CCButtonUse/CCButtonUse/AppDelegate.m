@@ -1,8 +1,9 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
+//	AppDelegate.m
+//		CCButtonUse
 //		Chen Chen @ Apirl 13th, 2015
 //
+
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -14,48 +15,48 @@
 /**
  *  应用启动方法
  */
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     return YES;
 }
 
 /**
  *  应用将要失去焦点方法
  */
-- (void)applicationWillResignActive:(UIApplication *)application
-{
+- (void)applicationWillResignActive:(UIApplication *)application {
+    
     NSLog(@"%s", __func__);
 }
 
 /**
  *  应用已经进入后台方法
  */
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    
     NSLog(@"%s", __func__);
 }
 
 /**
  *  应用将要进入前台方法
  */
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    
     NSLog(@"%s", __func__);
 }
 
 /**
  *  应用已经成为焦点方法
  */
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    
     NSLog(@"%s", __func__);
 }
 
 /**
  *  应用将要终止方法
  */
-- (void)applicationWillTerminate:(UIApplication *)application
-{
+- (void)applicationWillTerminate:(UIApplication *)application {
+    
     NSLog(@"%s", __func__);
 }
 

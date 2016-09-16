@@ -1,6 +1,6 @@
 //
 //	Extension.swift
-//		CCAddCounter
+//		CCButtonUse
 //		Chen Chen @ July 25th, 2016
 //
 
