@@ -3,5 +3,5 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'CCAddCounter-Swift' do
-    pod 'Cartography', '~> 0.6.0'
+    pod 'Cartography', '~> 1.0.0'
 end

@@ -7,28 +7,28 @@
 import Foundation
 import UIKit
 
-extension NSDate {
+extension Date {
     
     /**
      字符串创建日期方法
      */
-    class func convertStringToDate(timeString: String, formatterString: String) -> NSDate  {
+    static func convertStringToDate(_ timeString: String, formatterString: String) -> Date  {
         
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = formatterString
-        formatter.locale = NSLocale(localeIdentifier: "en")
+        formatter.locale = Locale(identifier: "en")
         
-        return formatter.dateFromString(timeString)!
+        return formatter.date(from: timeString)!
     }
     
     /**
      格式化字符串方法
      */
-    class func formatDateToString(date: NSDate) -> String {
+    static func formatDateToString(_ date: Date) -> String {
         
-        let dateFormatter = NSDateFormatter()
-        let nowDate = NSDate()
-        let time = nowDate.timeIntervalSinceDate(date)
+        let dateFormatter = DateFormatter()
+        let nowDate = Date()
+        let time = nowDate.timeIntervalSince(date)
         var dateString = ""
         
         switch time {
@@ -41,27 +41,27 @@ extension NSDate {
             
         case (60 * 60)...(60 * 60 * 24):
             dateFormatter.dateFormat = "yyyy/MM/dd"
-            let dateDayString = dateFormatter.stringFromDate(date)
-            let nowDayString = dateFormatter.stringFromDate(nowDate)
+            let dateDayString = dateFormatter.string(from: date)
+            let nowDayString = dateFormatter.string(from: nowDate)
             
             dateFormatter.dateFormat = "HH:mm"
             if dateDayString == nowDayString {
-                dateString = "今天\(dateFormatter.stringFromDate(date))"
+                dateString = "今天\(dateFormatter.string(from: date))"
             } else {
-                dateString = "昨天\(dateFormatter.stringFromDate(date))"
+                dateString = "昨天\(dateFormatter.string(from: date))"
             }
             
         default:
             dateFormatter.dateFormat = "yyyy"
-            let dateYearString = dateFormatter.stringFromDate(date)
-            let nowYearString = dateFormatter.stringFromDate(nowDate)
+            let dateYearString = dateFormatter.string(from: date)
+            let nowYearString = dateFormatter.string(from: nowDate)
             
             if dateYearString == nowYearString {
                 dateFormatter.dateFormat = "MM-dd"
-                dateString = dateFormatter.stringFromDate(date)
+                dateString = dateFormatter.string(from: date)
             } else {
                 dateFormatter.dateFormat = "yyyy/MM/dd"
-                dateString = dateFormatter.stringFromDate(date)
+                dateString = dateFormatter.string(from: date)
             }
         }
         
@@ -77,9 +77,9 @@ extension String {
      */
     func acquireCachesDirectory() -> String {
         
-        let path = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).last!
+        let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last!
         let name = (self as NSString).lastPathComponent
-        let filePath = (path as NSString).stringByAppendingPathComponent(name)
+        let filePath = (path as NSString).appendingPathComponent(name)
         
         return filePath
     }
@@ -89,9 +89,9 @@ extension String {
      */
     func acquireDocumentDirectory() -> String {
         
-        let path = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).last!
+        let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last!
         let name = (self as NSString).lastPathComponent
-        let filePath = (path as NSString).stringByAppendingPathComponent(name)
+        let filePath = (path as NSString).appendingPathComponent(name)
         
         return filePath
     }
@@ -101,9 +101,9 @@ extension String {
      */
     func acquireTemporaryDirectory() -> String {
         
-        let path = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).last!
+        let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last!
         let name = (self as NSString).lastPathComponent
-        let filePath = (path as NSString).stringByAppendingPathComponent(name)
+        let filePath = (path as NSString).appendingPathComponent(name)
         
         return filePath
     }
@@ -120,13 +120,13 @@ extension UIButton {
         self.init()
         
         if let name = imageName {
-            setImage(UIImage(named: name), forState: .Normal)
-            setImage(UIImage(named: name + "_highlighted"), forState: .Highlighted)
+            setImage(UIImage(named: name), for: .normal)
+            setImage(UIImage(named: name + "_highlighted"), for: .highlighted)
         }
         
         if let backgroundName = backgroundImageName {
-            setBackgroundImage(UIImage(named: backgroundName), forState: .Normal)
-            setBackgroundImage(UIImage(named: backgroundName + "_highlighted"), forState: .Highlighted)
+            setBackgroundImage(UIImage(named: backgroundName), for: .normal)
+            setBackgroundImage(UIImage(named: backgroundName + "_highlighted"), for: .highlighted)
         }
         
         sizeToFit()
@@ -142,10 +142,10 @@ extension UIBarButtonItem {
     convenience init(imageName: String, target: AnyObject?, action: Selector) {
         
         let button = UIButton()
-        button.setImage(UIImage(named: imageName), forState: .Normal)
-        button.setImage(UIImage(named: imageName + "_highlighted"), forState: .Highlighted)
+        button.setImage(UIImage(named: imageName), for: .normal)
+        button.setImage(UIImage(named: imageName + "_highlighted"), for: .highlighted)
         button.sizeToFit()
-        button.addTarget(target, action: action, forControlEvents: .TouchUpInside)
+        button.addTarget(target, action: action, for: .touchUpInside)
         
         self.init(customView: button)
     }
@@ -182,7 +182,7 @@ extension UILabel {
         self.init()
         
         self.text = text
-        self.font = UIFont.systemFontOfSize(fontSize)
+        self.font = UIFont.systemFont(ofSize: fontSize)
         self.numberOfLines = lines
     }
 }

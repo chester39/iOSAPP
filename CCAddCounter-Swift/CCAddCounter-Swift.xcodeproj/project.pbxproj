@@ -94,8 +94,8 @@
 		865D33871D6210D0002F3A32 /* CCAddCounter-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				865D33881D6210D0002F3A32 /* AppDelegate.swift */,
 				25115FD31D62B4E200EAE3F9 /* AddCounterView.swift */,
+				865D33881D6210D0002F3A32 /* AppDelegate.swift */,
 				865D338A1D6210D0002F3A32 /* ViewController.swift */,
 				864DF4501D7C56CB00AD20D4 /* CCUtil */,
 				865D338F1D6210D0002F3A32 /* Assets.xcassets */,
@@ -141,6 +141,7 @@
 					865D33841D6210D0002F3A32 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 72SC2S8T6M;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -342,6 +343,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chenchen.CCAddCounter-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -354,6 +356,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chenchen.CCAddCounter-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

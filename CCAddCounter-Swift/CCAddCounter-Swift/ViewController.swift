@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         view = addCounterView
-        addCounterView.addButton.addTarget(self, action: #selector(addCounter), forControlEvents: .TouchUpInside)
+        addCounterView.addButton.addTarget(self, action: #selector(addCounter), for: .touchUpInside)
     }
     
     // MARK: - 界面方法
