@@ -3,5 +3,5 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'CCButtonUse-Swift' do
-    pod 'Cartography', '~> 0.6.0'
+    pod 'Cartography', '~> 0.7.0'
 end

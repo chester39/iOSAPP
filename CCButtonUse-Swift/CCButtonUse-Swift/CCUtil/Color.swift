@@ -1,6 +1,6 @@
 //
 //  Color.swift
-//		CCButtonUse
+//		CCWeiboAPP
 //		Chen Chen @ September 7th, 2016
 //
 

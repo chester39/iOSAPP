@@ -13,11 +13,11 @@ class AddCounterView: UIView {
     /// 加数文本框
     var numberA = UITextField()
     /// 加号标签
-    fileprivate var plusSign = UILabel(text: "+", fontSize: 17, lines: 1)
+    private var plusSign = UILabel(text: "+", fontSize: 17, lines: 1)
     /// 被加数文本框
     var numberB = UITextField()
     /// 等号标签
-    fileprivate var equalSign = UILabel(text: "=", fontSize: 17, lines: 1)
+    private var equalSign = UILabel(text: "=", fontSize: 17, lines: 1)
     /// 加法和标签
     var sumAnswer = UILabel(text: "0", fontSize: 17, lines: 0)
     /// 加法按钮
@@ -49,34 +49,34 @@ class AddCounterView: UIView {
     /**
      初始化界面方法
      */
-    fileprivate func setupUI() {
+    private func setupUI() {
         
         numberA.placeholder = "数字A"
-        numberA.borderStyle = .roundedRect
+        numberA.borderStyle = .RoundedRect
         numberA.adjustsFontSizeToFitWidth = true
         addSubview(numberA)
         
         addSubview(plusSign)
         
         numberB.placeholder = "数字B"
-        numberB.borderStyle = .roundedRect
+        numberB.borderStyle = .RoundedRect
         numberB.adjustsFontSizeToFitWidth = true
         addSubview(numberB)
         
         addSubview(equalSign)
         
-        sumAnswer.textAlignment = .center
+        sumAnswer.textAlignment = .Center
         addSubview(sumAnswer)
         
-        addButton.setTitle("计算", for: .normal)
-        addButton.setTitleColor(MainColor, for: .normal)
+        addButton.setTitle("计算", forState: .Normal)
+        addButton.setTitleColor(MainColor, forState: .Normal)
         addSubview(addButton)
     }
     
     /**
      初始化约束方法
      */
-    fileprivate func setupConstraints() {
+    private func setupConstraints() {
         
         constrain(numberA, plusSign, numberB) { (numberA, plusSign, numberB) in
             numberA.width == kViewAdapter

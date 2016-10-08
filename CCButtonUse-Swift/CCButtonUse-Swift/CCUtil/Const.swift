@@ -1,6 +1,6 @@
 //
 //	Const.swift
-//		CCButtonUse
+//		CCWeiboAPP
 //		Chen Chen @ August 11th, 2016
 //
 

@@ -8,9 +8,10 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    /// 应用窗口
     var window: UIWindow?
-
+    
     // MARK: - 系统代理方法
     
     /**
@@ -18,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      */
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        window?.backgroundColor = UIColor.whiteColor()
+        window = UIWindow(frame: kScreenFrame)
+        window?.backgroundColor = CommonLightColor
         window?.rootViewController = ViewController()
         window?.makeKeyAndVisible()
         
@@ -65,6 +66,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         print(#function)
     }
-
+    
 }
-

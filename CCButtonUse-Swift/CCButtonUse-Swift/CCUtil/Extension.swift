@@ -1,6 +1,6 @@
 //
 //	Extension.swift
-//		CCButtonUse
+//		CCWeiboAPP
 //		Chen Chen @ July 25th, 2016
 //
 
@@ -47,6 +47,7 @@ extension NSDate {
             dateFormatter.dateFormat = "HH:mm"
             if dateDayString == nowDayString {
                 dateString = "今天\(dateFormatter.stringFromDate(date))"
+                
             } else {
                 dateString = "昨天\(dateFormatter.stringFromDate(date))"
             }
@@ -59,6 +60,7 @@ extension NSDate {
             if dateYearString == nowYearString {
                 dateFormatter.dateFormat = "MM-dd"
                 dateString = dateFormatter.stringFromDate(date)
+                
             } else {
                 dateFormatter.dateFormat = "yyyy/MM/dd"
                 dateString = dateFormatter.stringFromDate(date)
@@ -172,6 +174,55 @@ extension UIColor {
     
 }
 
+extension UIImage {
+    
+    /**
+     图片染色方法
+     */
+    func tintImageWithColor(color: UIColor, alpha: CGFloat) -> UIImage {
+        
+        let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        UIGraphicsBeginImageContextWithOptions(rect.size, true, scale)
+        let context = UIGraphicsGetCurrentContext()
+        drawInRect(rect)
+        
+        CGContextSetFillColorWithColor(context, color.CGColor)
+        CGContextSetAlpha(context, alpha)
+        CGContextSetBlendMode(context, .SourceAtop)
+        CGContextFillRect(context, rect)
+        
+        let imageRef = CGBitmapContextCreateImage(context)!
+        let newImage = UIImage(CGImage: imageRef, scale: scale, orientation: imageOrientation)
+        UIGraphicsEndImageContext()
+        
+        return newImage
+    }
+    
+    /**
+     重叠图片方法
+     */
+    func overlapImageWithColor(color: UIColor) -> UIImage {
+        
+        let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        color.setFill()
+        UIRectFill(rect)
+        let colorImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        UIGraphicsBeginImageContext(size)
+        colorImage.drawInRect(rect)
+        drawInRect(rect)
+        
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage
+    }
+    
+}
+
 extension UILabel {
     
     /**
@@ -185,4 +236,35 @@ extension UILabel {
         self.font = UIFont.systemFontOfSize(fontSize)
         self.numberOfLines = lines
     }
+}
+
+extension UIWindow {
+    
+    /**
+     判断是否浅色方法
+     */
+    class func isLightColor(string: String) -> Bool {
+        
+        let redString = (string as NSString).substringWithRange(NSRange(location: 1, length: 2))
+        let greenString = (string as NSString).substringWithRange(NSRange(location: 3, length: 2))
+        let blueString = (string as NSString).substringWithRange(NSRange(location: 5, length: 2))
+        
+        var scanner = NSScanner(string: redString)
+        var red: UInt32 = 0
+        var green: UInt32 = 0
+        var blue: UInt32 = 0
+        scanner.scanHexInt(&red)
+        scanner = NSScanner(string: greenString)
+        scanner.scanHexInt(&green)
+        scanner = NSScanner(string: blueString)
+        scanner.scanHexInt(&blue)
+        
+        if (red + blue + green) < 382 {
+            return false
+            
+        } else {
+            return true
+        }
+    }
+    
 }

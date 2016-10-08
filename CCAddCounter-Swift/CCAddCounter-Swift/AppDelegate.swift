@@ -9,6 +9,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    /// 应用窗口
     var window: UIWindow?
     
     // MARK: - 系统代理方法
@@ -16,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /**
      应用启动方法
      */
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         window = UIWindow(frame: kScreenFrame)
         window?.backgroundColor = CommonLightColor
@@ -29,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /**
      应用将要失去焦点方法
      */
-    func applicationWillResignActive(_ application: UIApplication) {
+    func applicationWillResignActive(application: UIApplication) {
         
         print(#function)
     }
@@ -37,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /**
      应用已经进入后台方法
      */
-    func applicationDidEnterBackground(_ application: UIApplication) {
+    func applicationDidEnterBackground(application: UIApplication) {
         
         print(#function)
     }
@@ -45,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /**
      应用将要进入前台方法
      */
-    func applicationWillEnterForeground(_ application: UIApplication) {
+    func applicationWillEnterForeground(application: UIApplication) {
         
         print(#function)
     }
@@ -53,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /**
      应用已经成为焦点方法
      */
-    func applicationDidBecomeActive(_ application: UIApplication) {
+    func applicationDidBecomeActive(application: UIApplication) {
         
         print(#function)
     }
@@ -61,7 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /**
      应用将要终止方法
      */
-    func applicationWillTerminate(_ application: UIApplication) {
+    func applicationWillTerminate(application: UIApplication) {
         
         print(#function)
     }
