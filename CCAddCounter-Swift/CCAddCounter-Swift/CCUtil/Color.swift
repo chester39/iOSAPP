@@ -10,10 +10,10 @@ import Foundation
 // MARK: - 基本颜色
 
 /// App主颜色: Blue
-let MainColor = UIColor.blueColor()
+let MainColor = UIColor.blue
 ///  通用浅颜色: White
-let CommonLightColor = UIColor.whiteColor()
+let CommonLightColor = UIColor.white
 /// 通用深颜色: Black
-let CommonDarkColor = UIColor.blackColor()
+let CommonDarkColor = UIColor.black
 /// 透明背景颜色: Clear
-let ClearColor = UIColor.clearColor()
+let ClearColor = UIColor.clear

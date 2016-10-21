@@ -24,11 +24,11 @@ let kViewStandard: CGFloat = 100
 /// 视图移动距离: 160
 let kViewDistance: CGFloat = 160
 /// 屏幕尺寸: iPhone4/4s: 320-480 iPhone5/5s: 320-568 iPhone6/6s: 375-667 iPhone6/6s Plus: 414-736
-let kScreenFrame: CGRect = UIScreen.mainScreen().bounds
+let kScreenFrame: CGRect = UIScreen.main.bounds
 /// 屏幕宽度: 320/375/414
-let kScreenWidth: CGFloat = UIScreen.mainScreen().bounds.size.width
+let kScreenWidth: CGFloat = UIScreen.main.bounds.size.width
 /// 屏幕高度: 480/568/667/736
-let kScreenHeight: CGFloat = UIScreen.mainScreen().bounds.size.height
+let kScreenHeight: CGFloat = UIScreen.main.bounds.size.height
 /// 状态栏高度: 20
 let kStatusBarHeight: CGFloat = 20
 /// 导航栏高度: 44

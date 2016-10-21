@@ -7,264 +7,265 @@
 import Foundation
 import UIKit
 
-extension NSDate {
-    
+extension Date {
+
     /**
      字符串创建日期方法
      */
-    class func convertStringToDate(timeString: String, formatterString: String) -> NSDate  {
-        
-        let formatter = NSDateFormatter()
+    static func convertStringToDate(_ timeString: String, formatterString: String) -> Date  {
+
+        let formatter = DateFormatter()
         formatter.dateFormat = formatterString
-        formatter.locale = NSLocale(localeIdentifier: "en")
-        
-        return formatter.dateFromString(timeString)!
+        formatter.locale = Locale(identifier: "en")
+
+        return formatter.date(from: timeString)!
     }
-    
+
     /**
      格式化字符串方法
      */
-    class func formatDateToString(date: NSDate) -> String {
-        
-        let dateFormatter = NSDateFormatter()
-        let nowDate = NSDate()
-        let time = nowDate.timeIntervalSinceDate(date)
+    static func formatDateToString(_ date: Date) -> String {
+
+        let dateFormatter = DateFormatter()
+        let nowDate = Date()
+        let time = nowDate.timeIntervalSince(date)
         var dateString = ""
-        
+
         switch time {
         case 0...60:
             dateString = "刚刚"
-            
+
         case 61...(60 * 60):
             let minute = (Int)(time / 60)
             dateString = "\(minute)分钟前"
-            
+
         case (60 * 60)...(60 * 60 * 24):
             dateFormatter.dateFormat = "yyyy/MM/dd"
-            let dateDayString = dateFormatter.stringFromDate(date)
-            let nowDayString = dateFormatter.stringFromDate(nowDate)
-            
+            let dateDayString = dateFormatter.string(from: date)
+            let nowDayString = dateFormatter.string(from: nowDate)
+
             dateFormatter.dateFormat = "HH:mm"
             if dateDayString == nowDayString {
-                dateString = "今天\(dateFormatter.stringFromDate(date))"
-                
+                dateString = "今天\(dateFormatter.string(from: date))"
+
             } else {
-                dateString = "昨天\(dateFormatter.stringFromDate(date))"
+                dateString = "昨天\(dateFormatter.string(from: date))"
             }
-            
+
         default:
             dateFormatter.dateFormat = "yyyy"
-            let dateYearString = dateFormatter.stringFromDate(date)
-            let nowYearString = dateFormatter.stringFromDate(nowDate)
-            
+            let dateYearString = dateFormatter.string(from: date)
+            let nowYearString = dateFormatter.string(from: nowDate)
+
             if dateYearString == nowYearString {
                 dateFormatter.dateFormat = "MM-dd"
-                dateString = dateFormatter.stringFromDate(date)
-                
+                dateString = dateFormatter.string(from: date)
+
             } else {
                 dateFormatter.dateFormat = "yyyy/MM/dd"
-                dateString = dateFormatter.stringFromDate(date)
+                dateString = dateFormatter.string(from: date)
             }
         }
-        
+
         return dateString
     }
-    
+
 }
 
 extension String {
-    
+
     /**
      获取缓存目录方法
      */
     func acquireCachesDirectory() -> String {
-        
-        let path = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).last!
+
+        let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last!
         let name = (self as NSString).lastPathComponent
-        let filePath = (path as NSString).stringByAppendingPathComponent(name)
-        
+        let filePath = (path as NSString).appendingPathComponent(name)
+
         return filePath
     }
-    
+
     /**
      获取文档目录方法
      */
     func acquireDocumentDirectory() -> String {
-        
-        let path = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).last!
+
+        let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last!
         let name = (self as NSString).lastPathComponent
-        let filePath = (path as NSString).stringByAppendingPathComponent(name)
-        
+        let filePath = (path as NSString).appendingPathComponent(name)
+
         return filePath
     }
-    
+
     /**
      获取临时目录方法
      */
     func acquireTemporaryDirectory() -> String {
-        
-        let path = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).last!
+
+        let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last!
         let name = (self as NSString).lastPathComponent
-        let filePath = (path as NSString).stringByAppendingPathComponent(name)
-        
+        let filePath = (path as NSString).appendingPathComponent(name)
+
         return filePath
     }
-    
+
 }
 
 extension UIButton {
-    
+
     /**
      图片和背景图片便利初始化方法
      */
     convenience init(imageName: String?, backgroundImageName: String?) {
-        
+
         self.init()
-        
+
         if let name = imageName {
-            setImage(UIImage(named: name), forState: .Normal)
-            setImage(UIImage(named: name + "_highlighted"), forState: .Highlighted)
+            setImage(UIImage(named: name), for: .normal)
+            setImage(UIImage(named: name + "_highlighted"), for: .highlighted)
         }
-        
+
         if let backgroundName = backgroundImageName {
-            setBackgroundImage(UIImage(named: backgroundName), forState: .Normal)
-            setBackgroundImage(UIImage(named: backgroundName + "_highlighted"), forState: .Highlighted)
+            setBackgroundImage(UIImage(named: backgroundName), for: .normal)
+            setBackgroundImage(UIImage(named: backgroundName + "_highlighted"), for: .highlighted)
         }
-        
+
         sizeToFit()
     }
-    
+
 }
 
 extension UIBarButtonItem {
-    
+
     /**
      指定图片和目标便利初始化方法
      */
     convenience init(imageName: String, target: AnyObject?, action: Selector) {
-        
+
         let button = UIButton()
-        button.setImage(UIImage(named: imageName), forState: .Normal)
-        button.setImage(UIImage(named: imageName + "_highlighted"), forState: .Highlighted)
+        button.setImage(UIImage(named: imageName), for: .normal)
+        button.setImage(UIImage(named: imageName + "_highlighted"), for: .highlighted)
         button.sizeToFit()
-        button.addTarget(target, action: action, forControlEvents: .TouchUpInside)
-        
+        button.addTarget(target, action: action, for: .touchUpInside)
+
         self.init(customView: button)
     }
-    
+
 }
 
 extension UIColor {
-    
+
     /**
      十六进制颜色便利初始化方法
      */
     convenience init(hex: Int) {
-        
+
         self.init(hex: hex, alpha: 1.0)
     }
-    
+
     /**
      十六进制透明度颜色便利初始化方法
      */
     convenience init(hex: Int, alpha: CGFloat) {
-        
+
         self.init(red: (CGFloat)((hex & 0xFF0000) >> 16) / 255.0, green: (CGFloat)((hex & 0x00FF00) >> 8) / 255.0, blue: (CGFloat)((hex & 0x0000FF) >> 0) / 255.0, alpha: alpha)
     }
-    
+
 }
 
 extension UIImage {
-    
+
     /**
      图片染色方法
      */
-    func tintImageWithColor(color: UIColor, alpha: CGFloat) -> UIImage {
-        
+    func tintImageWithColor(_ color: UIColor, alpha: CGFloat) -> UIImage {
+
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         UIGraphicsBeginImageContextWithOptions(rect.size, true, scale)
         let context = UIGraphicsGetCurrentContext()
-        drawInRect(rect)
-        
-        CGContextSetFillColorWithColor(context, color.CGColor)
-        CGContextSetAlpha(context, alpha)
-        CGContextSetBlendMode(context, .SourceAtop)
-        CGContextFillRect(context, rect)
-        
-        let imageRef = CGBitmapContextCreateImage(context)!
-        let newImage = UIImage(CGImage: imageRef, scale: scale, orientation: imageOrientation)
+        draw(in: rect)
+
+        context?.setFillColor(color.cgColor)
+        context?.setAlpha(alpha)
+        context?.setBlendMode(.sourceAtop)
+        context?.fill(rect)
+
+        let imageRef = context?.makeImage()!
+        let newImage = UIImage(cgImage: imageRef!, scale: scale, orientation: imageOrientation)
         UIGraphicsEndImageContext()
-        
+
         return newImage
     }
-    
+
     /**
      重叠图片方法
      */
-    func overlapImageWithColor(color: UIColor) -> UIImage {
-        
+    func overlapImageWithColor(_ color: UIColor) -> UIImage {
+
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-        
+
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         color.setFill()
         UIRectFill(rect)
         let colorImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
+
         UIGraphicsBeginImageContext(size)
-        colorImage.drawInRect(rect)
-        drawInRect(rect)
-        
+        colorImage?.draw(in: rect)
+        draw(in: rect)
+
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
-        return newImage
+
+        return newImage!
     }
-    
+
 }
 
 extension UILabel {
-    
+
     /**
      文字和字号和行数便利初始化方法
      */
     convenience init(text: String, fontSize: CGFloat, lines: Int) {
-        
+
         self.init()
-        
+
         self.text = text
-        self.font = UIFont.systemFontOfSize(fontSize)
+        self.font = UIFont.systemFont(ofSize: fontSize)
         self.numberOfLines = lines
     }
+
 }
 
 extension UIWindow {
-    
+
     /**
      判断是否浅色方法
      */
-    class func isLightColor(string: String) -> Bool {
-        
-        let redString = (string as NSString).substringWithRange(NSRange(location: 1, length: 2))
-        let greenString = (string as NSString).substringWithRange(NSRange(location: 3, length: 2))
-        let blueString = (string as NSString).substringWithRange(NSRange(location: 5, length: 2))
-        
-        var scanner = NSScanner(string: redString)
+    class func isLightColor(_ string: String) -> Bool {
+
+        let redString = (string as NSString).substring(with: NSRange(location: 1, length: 2))
+        let greenString = (string as NSString).substring(with: NSRange(location: 3, length: 2))
+        let blueString = (string as NSString).substring(with: NSRange(location: 5, length: 2))
+
+        var scanner = Scanner(string: redString)
         var red: UInt32 = 0
         var green: UInt32 = 0
         var blue: UInt32 = 0
-        scanner.scanHexInt(&red)
-        scanner = NSScanner(string: greenString)
-        scanner.scanHexInt(&green)
-        scanner = NSScanner(string: blueString)
-        scanner.scanHexInt(&blue)
-        
+        scanner.scanHexInt32(&red)
+        scanner = Scanner(string: greenString)
+        scanner.scanHexInt32(&green)
+        scanner = Scanner(string: blueString)
+        scanner.scanHexInt32(&blue)
+
         if (red + blue + green) < 382 {
             return false
-            
+
         } else {
             return true
         }
     }
-    
+
 }
