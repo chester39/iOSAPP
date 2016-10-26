@@ -1,6 +1,6 @@
 //
 //	Extension.swift
-//		CCWeiboAPP
+//		CCUtil
 //		Chen Chen @ July 25th, 2016
 //
 
@@ -79,7 +79,7 @@ extension String {
      */
     func acquireCachesDirectory() -> String {
 
-        let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last!
+        let path = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).last!
         let name = (self as NSString).lastPathComponent
         let filePath = (path as NSString).appendingPathComponent(name)
 
@@ -91,7 +91,7 @@ extension String {
      */
     func acquireDocumentDirectory() -> String {
 
-        let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last!
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last!
         let name = (self as NSString).lastPathComponent
         let filePath = (path as NSString).appendingPathComponent(name)
 
@@ -103,7 +103,7 @@ extension String {
      */
     func acquireTemporaryDirectory() -> String {
 
-        let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last!
+        let path = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).last!
         let name = (self as NSString).lastPathComponent
         let filePath = (path as NSString).appendingPathComponent(name)
 
@@ -237,6 +237,53 @@ extension UILabel {
         self.numberOfLines = lines
     }
 
+}
+
+extension UIView {
+    
+    /**
+     获取缓存大小方法
+     */
+    func acquireCachesSize() -> Float {
+        
+        let cachePath = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).last!
+        let fileAttributes = FileManager.default.subpaths(atPath: cachePath)!
+        var size = 0
+        for fileName in fileAttributes {
+            let path = cachePath + "/\(fileName)"
+            let attributes = try! FileManager.default.attributesOfItem(atPath: path)
+            for (numberA, numberB) in attributes {
+                if numberA == FileAttributeKey.size {
+                    size += numberB as! Int
+                }
+            }
+        }
+        
+        let mb: Float = Float(size) / 1024 / 1024
+        
+        return mb
+    }
+    
+    /**
+     清除缓存方法
+     */
+    func clearCaches() {
+        
+        let cachePath = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).last!
+        let fileAttributes = FileManager.default.subpaths(atPath: cachePath)!
+        for fileName in fileAttributes {
+            let path = cachePath + "/\(fileName)"
+            if FileManager.default.fileExists(atPath: path) {
+                do {
+                    try FileManager.default.removeItem(atPath: path)
+                    
+                } catch {
+                    print("清除缓存失败")
+                }
+            }
+        }
+    }
+    
 }
 
 extension UIWindow {

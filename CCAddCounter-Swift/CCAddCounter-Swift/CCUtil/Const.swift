@@ -1,6 +1,6 @@
 //
 //	Const.swift
-//		CCWeiboAPP
+//		CCUtil
 //		Chen Chen @ August 11th, 2016
 //
 

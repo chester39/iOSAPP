@@ -1,6 +1,6 @@
 //
 //  Color.swift
-//		CCWeiboAPP
+//		CCUtil
 //		Chen Chen @ September 7th, 2016
 //
 

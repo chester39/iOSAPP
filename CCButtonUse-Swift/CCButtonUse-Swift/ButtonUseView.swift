@@ -36,7 +36,7 @@ class ButtonUseView: UIView {
     /**
      初始化界面方法
      */
-    private func setupUI() {
+    fileprivate func setupUI() {
         
         
     }
@@ -44,7 +44,7 @@ class ButtonUseView: UIView {
     /**
      初始化约束方法
      */
-    private func setupConstraints() {
+    fileprivate func setupConstraints() {
         
     }
 

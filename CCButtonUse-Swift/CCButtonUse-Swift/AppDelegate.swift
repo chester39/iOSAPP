@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /**
      应用启动方法
      */
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: kScreenFrame)
         window?.backgroundColor = CommonLightColor
@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /**
      应用将要失去焦点方法
      */
-    func applicationWillResignActive(application: UIApplication) {
+    func applicationWillResignActive(_ application: UIApplication) {
         
         print(#function)
     }
@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /**
      应用已经进入后台方法
      */
-    func applicationDidEnterBackground(application: UIApplication) {
+    func applicationDidEnterBackground(_ application: UIApplication) {
         
         print(#function)
     }
@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /**
      应用将要进入前台方法
      */
-    func applicationWillEnterForeground(application: UIApplication) {
+    func applicationWillEnterForeground(_ application: UIApplication) {
         
         print(#function)
     }
@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /**
      应用已经成为焦点方法
      */
-    func applicationDidBecomeActive(application: UIApplication) {
+    func applicationDidBecomeActive(_ application: UIApplication) {
         
         print(#function)
     }
@@ -62,7 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /**
      应用将要终止方法
      */
-    func applicationWillTerminate(application: UIApplication) {
+    func applicationWillTerminate(_ application: UIApplication) {
         
         print(#function)
     }
