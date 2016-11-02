@@ -69,7 +69,7 @@ class AddCounterView: UIView {
         addSubview(sumAnswer)
 
         addButton.setTitle("计算", for: .normal)
-        addButton.setTitleColor(MainColor, for: .normal)
+        addButton.setTitleColor(.blue, for: .normal)
         addSubview(addButton)
     }
 

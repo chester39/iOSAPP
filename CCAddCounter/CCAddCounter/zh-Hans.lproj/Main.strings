@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "+"; ObjectID = "6cs-V9-P7y"; */
+"6cs-V9-P7y.text" = "+";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "7HG-MJ-g1E"; */
+"7HG-MJ-g1E.text" = "0";
+
+/* Class = "UILabel"; text = "="; ObjectID = "PDc-nm-Uw1"; */
+"PDc-nm-Uw1.text" = "=";
+
+/* Class = "UIButton"; normalTitle = "计算"; ObjectID = "jbv-kw-Bl1"; */
+"jbv-kw-Bl1.normalTitle" = "计算";

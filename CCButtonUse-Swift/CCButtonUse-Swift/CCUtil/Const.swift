@@ -33,7 +33,9 @@ let kScreenHeight: CGFloat = UIScreen.main.bounds.size.height
 let kStatusBarHeight: CGFloat = 20
 /// 导航栏高度: 44
 let kNavigationBarHeight: CGFloat = 44
+/// 顶端高度: 64
+let kTopHeight: CGFloat = 64
 /// 可用高度: 64
-let kAvailableHeight: CGFloat = (kStatusBarHeight + kNavigationBarHeight)
+let kAvailableHeight: CGFloat = kScreenHeight - kTopHeight
 /// 键盘高度: 238
 let kKeyboardHeight: CGFloat = 238

@@ -1,7 +1,7 @@
 //
 //	AppDelegate.swift
 //		CCButtonUse
-//		Chen Chen @ August 16th, 2016
+//		Chen Chen @ November 2nd, 2016
 //
 
 import UIKit
@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: kScreenFrame)
-        window?.backgroundColor = CommonLightColor
+        window?.backgroundColor = .white
         window?.rootViewController = ViewController()
         window?.makeKeyAndVisible()
         

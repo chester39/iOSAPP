@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0810"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "865FC6821D635D310029F5D9"
+               BlueprintIdentifier = "868F32E51DCA38EC00E6E0B9"
                BuildableName = "CCButtonUse-Swift.app"
                BlueprintName = "CCButtonUse-Swift"
                ReferencedContainer = "container:CCButtonUse-Swift.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "865FC6821D635D310029F5D9"
+            BlueprintIdentifier = "868F32E51DCA38EC00E6E0B9"
             BuildableName = "CCButtonUse-Swift.app"
             BlueprintName = "CCButtonUse-Swift"
             ReferencedContainer = "container:CCButtonUse-Swift.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "865FC6821D635D310029F5D9"
+            BlueprintIdentifier = "868F32E51DCA38EC00E6E0B9"
             BuildableName = "CCButtonUse-Swift.app"
             BlueprintName = "CCButtonUse-Swift"
             ReferencedContainer = "container:CCButtonUse-Swift.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "865FC6821D635D310029F5D9"
+            BlueprintIdentifier = "868F32E51DCA38EC00E6E0B9"
             BuildableName = "CCButtonUse-Swift.app"
             BlueprintName = "CCButtonUse-Swift"
             ReferencedContainer = "container:CCButtonUse-Swift.xcodeproj">

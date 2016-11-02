@@ -7,32 +7,32 @@
 #import "ViewController.h"
 
 /// 按钮功能枚举数组
-typedef NS_ENUM(NSInteger, CCButtonType) {
+typedef NS_ENUM(NSInteger, kButtonType) {
     /// 上移按钮
-    CCButtonTypeUp = 10,
+    kButtonTypeTop = 10,
     /// 下移按钮
-    CCButtonTypeBottom,
+    kButtonTypeBottom,
     /// 左移按钮
-    CCButtonTypeLeft,
+    kButtonTypeLeft,
     /// 右移按钮
-    CCButtonTypeRight,
-    /// 放大按钮
-    CCButtonTypeBig,
-    /// 缩小按钮
-    CCButtonTypeSmall,
+    kButtonTypeRight,
     /// 左转按钮
-    CCButtonTypeTurnLeft,
+    kButtonTypeLeftRotate,
     /// 右转按钮
-    CCButtonTypeTurnRight,
+    kButtonTypeRightRotate,
+    /// 放大按钮
+    kButtonTypePlus,
+    /// 缩小按钮
+    kButtonTypeMinus,
 };
 
 /// 移动量
-static const CGFloat CCMovingDelta = 10.0;
+static const CGFloat kMovingDistance = 10.0;
 
 @interface ViewController ()
 
 /// 头像照片
-@property (weak, nonatomic) IBOutlet UIButton *buttonImage;
+@property (weak, nonatomic) IBOutlet UIButton *imageButton;
 
 @end
 
@@ -53,73 +53,73 @@ static const CGFloat CCMovingDelta = 10.0;
 /**
  *  移动图片方法
  */
-- (IBAction)moveImage:(UIButton *)sender {
-    
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:2.0];
-    
-    CGRect tempFrame = self.buttonImage.frame;
-    switch (sender.tag) {
-        case CCButtonTypeUp:
-            tempFrame.origin.y -= CCMovingDelta;
-            break;
-            
-        case CCButtonTypeBottom:
-            tempFrame.origin.y += CCMovingDelta;
-            break;
-            
-        case CCButtonTypeLeft:
-            tempFrame.origin.x -= CCMovingDelta;
-            break;
-            
-        case CCButtonTypeRight:
-            tempFrame.origin.x += CCMovingDelta;
-            break;
-    }
-    
-    self.buttonImage.frame = tempFrame;
-    [UIView commitAnimations];
-}
-
-/**
- *  放缩图片方法
- */
-- (IBAction)changeImage:(UIButton *)sender {
+- (IBAction)moveImage:(UIButton *)button {
     
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:1.0];
     
-    CGRect tempBounds = self.buttonImage.bounds;
-    switch (sender.tag) {
-        case CCButtonTypeBig:
-            tempBounds.size.width += CCMovingDelta;
-            tempBounds.size.height += CCMovingDelta;
+    CGRect tempFrame = self.imageButton.frame;
+    switch (button.tag) {
+        case kButtonTypeTop:
+            tempFrame.origin.y -= kMovingDistance;
             break;
             
-        case CCButtonTypeSmall:
-            tempBounds.size.width -= CCMovingDelta;
-            tempBounds.size.height -= CCMovingDelta;
+        case kButtonTypeBottom:
+            tempFrame.origin.y += kMovingDistance;
+            break;
+            
+        case kButtonTypeLeft:
+            tempFrame.origin.x -= kMovingDistance;
+            break;
+            
+        case kButtonTypeRight:
+            tempFrame.origin.x += kMovingDistance;
             break;
     }
     
-    self.buttonImage.bounds = tempBounds;
+    self.imageButton.frame = tempFrame;
     [UIView commitAnimations];
 }
 
 /**
  *  旋转图片方法
  */
-- (IBAction)rotateImage:(UIButton *)sender {
+- (IBAction)rotateImage:(UIButton *)button {
     
-    switch (sender.tag) {
-        case CCButtonTypeTurnLeft:
-            self.buttonImage.transform = CGAffineTransformRotate(self.buttonImage.transform, -M_PI_4);
+    switch (button.tag) {
+        case kButtonTypeLeftRotate:
+            self.imageButton.transform = CGAffineTransformRotate(self.imageButton.transform, -M_PI_4);
             break;
             
-        case CCButtonTypeTurnRight:
-            self.buttonImage.transform = CGAffineTransformRotate(self.buttonImage.transform, M_PI_4);
+        case kButtonTypeRightRotate:
+            self.imageButton.transform = CGAffineTransformRotate(self.imageButton.transform, M_PI_4);
             break;
     }
+}
+
+/**
+ *  放缩图片方法
+ */
+- (IBAction)changeImage:(UIButton *)button {
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:2.0];
+    
+    CGRect tempBounds = self.imageButton.bounds;
+    switch (button.tag) {
+        case kButtonTypePlus:
+            tempBounds.size.width += kMovingDistance;
+            tempBounds.size.height += kMovingDistance;
+            break;
+            
+        case kButtonTypeMinus:
+            tempBounds.size.width -= kMovingDistance;
+            tempBounds.size.height -= kMovingDistance;
+            break;
+    }
+    
+    self.imageButton.bounds = tempBounds;
+    [UIView commitAnimations];
 }
 
 @end

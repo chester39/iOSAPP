@@ -7,117 +7,115 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26350341BE9DE578736FCFE0 /* Pods_CCButtonUse_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81043A79D79D46C079B990AB /* Pods_CCButtonUse_Swift.framework */; };
-		865FC6871D635D310029F5D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865FC6861D635D310029F5D9 /* AppDelegate.swift */; };
-		865FC6891D635D310029F5D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865FC6881D635D310029F5D9 /* ViewController.swift */; };
-		865FC68E1D635D310029F5D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 865FC68D1D635D310029F5D9 /* Assets.xcassets */; };
-		865FC6911D635D310029F5D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 865FC68F1D635D310029F5D9 /* LaunchScreen.storyboard */; };
-		865FC6C31D635F560029F5D9 /* ButtonUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865FC6C21D635F560029F5D9 /* ButtonUseView.swift */; };
-		86A557911D8C5B4F00965D08 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A5578E1D8C5B4F00965D08 /* Color.swift */; };
-		86A557921D8C5B4F00965D08 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A5578F1D8C5B4F00965D08 /* Const.swift */; };
-		86A557931D8C5B4F00965D08 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A557901D8C5B4F00965D08 /* Extension.swift */; };
+		868F32EA1DCA38EC00E6E0B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868F32E91DCA38EC00E6E0B9 /* AppDelegate.swift */; };
+		868F32EC1DCA38EC00E6E0B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868F32EB1DCA38EC00E6E0B9 /* ViewController.swift */; };
+		868F32F11DCA38EC00E6E0B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868F32F01DCA38EC00E6E0B9 /* Assets.xcassets */; };
+		868F32F41DCA38EC00E6E0B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 868F32F21DCA38EC00E6E0B9 /* LaunchScreen.storyboard */; };
+		868F33041DCA3D6C00E6E0B9 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868F33011DCA3D6C00E6E0B9 /* Const.swift */; };
+		868F33051DCA3D6C00E6E0B9 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868F33021DCA3D6C00E6E0B9 /* Extension.swift */; };
+		86A3C77F1DCA45DD004A028D /* ButtonUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A3C77E1DCA45DD004A028D /* ButtonUseView.swift */; };
+		AD1B2AF3B95F7EEF3F361132 /* Pods_CCButtonUse_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9A275372A883C9635682FA /* Pods_CCButtonUse_Swift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0CFFD3FF35510B2857015176 /* Pods-CCButtonUse-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCButtonUse-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCButtonUse-Swift/Pods-CCButtonUse-Swift.debug.xcconfig"; sourceTree = "<group>"; };
-		81043A79D79D46C079B990AB /* Pods_CCButtonUse_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCButtonUse_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		865FC6831D635D310029F5D9 /* CCButtonUse-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CCButtonUse-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		865FC6861D635D310029F5D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		865FC6881D635D310029F5D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		865FC68D1D635D310029F5D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		865FC6901D635D310029F5D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		865FC6921D635D310029F5D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		865FC6C21D635F560029F5D9 /* ButtonUseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonUseView.swift; sourceTree = "<group>"; };
-		86A5578E1D8C5B4F00965D08 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		86A5578F1D8C5B4F00965D08 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		86A557901D8C5B4F00965D08 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		B2C4B411C6549533129A3582 /* Pods-CCButtonUse-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCButtonUse-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCButtonUse-Swift/Pods-CCButtonUse-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		09CEB3EFFCC0F95AB4C79007 /* Pods-CCButtonUse-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCButtonUse-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCButtonUse-Swift/Pods-CCButtonUse-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		868F32E61DCA38EC00E6E0B9 /* CCButtonUse-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CCButtonUse-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		868F32E91DCA38EC00E6E0B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		868F32EB1DCA38EC00E6E0B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		868F32F01DCA38EC00E6E0B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		868F32F31DCA38EC00E6E0B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		868F32F51DCA38EC00E6E0B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		868F33011DCA3D6C00E6E0B9 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		868F33021DCA3D6C00E6E0B9 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		868F33061DCA3DD200E6E0B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		86A3C77E1DCA45DD004A028D /* ButtonUseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonUseView.swift; sourceTree = "<group>"; };
+		A1B1B42923C5502786B8B2BA /* Pods-CCButtonUse-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCButtonUse-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCButtonUse-Swift/Pods-CCButtonUse-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		ED9A275372A883C9635682FA /* Pods_CCButtonUse_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCButtonUse_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		865FC6801D635D310029F5D9 /* Frameworks */ = {
+		868F32E31DCA38EC00E6E0B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26350341BE9DE578736FCFE0 /* Pods_CCButtonUse_Swift.framework in Frameworks */,
+				AD1B2AF3B95F7EEF3F361132 /* Pods_CCButtonUse_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		865FC67A1D635D310029F5D9 = {
+		10C365614E1D28672B6DA6DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				865FC6851D635D310029F5D9 /* CCButtonUse-Swift */,
-				865FC6841D635D310029F5D9 /* Products */,
-				F744028995641FCC177EEBB5 /* Pods */,
-				C887F09034A0D2C44AAF0E42 /* Frameworks */,
+				A1B1B42923C5502786B8B2BA /* Pods-CCButtonUse-Swift.debug.xcconfig */,
+				09CEB3EFFCC0F95AB4C79007 /* Pods-CCButtonUse-Swift.release.xcconfig */,
 			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		865FC6841D635D310029F5D9 /* Products */ = {
+		3ADA2D6773852E4F5A3114B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				865FC6831D635D310029F5D9 /* CCButtonUse-Swift.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		865FC6851D635D310029F5D9 /* CCButtonUse-Swift */ = {
-			isa = PBXGroup;
-			children = (
-				865FC6861D635D310029F5D9 /* AppDelegate.swift */,
-				865FC6881D635D310029F5D9 /* ViewController.swift */,
-				865FC6C21D635F560029F5D9 /* ButtonUseView.swift */,
-				86A5578D1D8C5B4F00965D08 /* CCUtil */,
-				865FC68D1D635D310029F5D9 /* Assets.xcassets */,
-				865FC68F1D635D310029F5D9 /* LaunchScreen.storyboard */,
-				865FC6921D635D310029F5D9 /* Info.plist */,
-			);
-			path = "CCButtonUse-Swift";
-			sourceTree = "<group>";
-		};
-		86A5578D1D8C5B4F00965D08 /* CCUtil */ = {
-			isa = PBXGroup;
-			children = (
-				86A5578E1D8C5B4F00965D08 /* Color.swift */,
-				86A5578F1D8C5B4F00965D08 /* Const.swift */,
-				86A557901D8C5B4F00965D08 /* Extension.swift */,
-			);
-			path = CCUtil;
-			sourceTree = "<group>";
-		};
-		C887F09034A0D2C44AAF0E42 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				81043A79D79D46C079B990AB /* Pods_CCButtonUse_Swift.framework */,
+				ED9A275372A883C9635682FA /* Pods_CCButtonUse_Swift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F744028995641FCC177EEBB5 /* Pods */ = {
+		868F32DD1DCA38EC00E6E0B9 = {
 			isa = PBXGroup;
 			children = (
-				0CFFD3FF35510B2857015176 /* Pods-CCButtonUse-Swift.debug.xcconfig */,
-				B2C4B411C6549533129A3582 /* Pods-CCButtonUse-Swift.release.xcconfig */,
+				868F32E81DCA38EC00E6E0B9 /* CCButtonUse-Swift */,
+				868F32E71DCA38EC00E6E0B9 /* Products */,
+				10C365614E1D28672B6DA6DA /* Pods */,
+				3ADA2D6773852E4F5A3114B9 /* Frameworks */,
 			);
-			name = Pods;
+			sourceTree = "<group>";
+		};
+		868F32E71DCA38EC00E6E0B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				868F32E61DCA38EC00E6E0B9 /* CCButtonUse-Swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		868F32E81DCA38EC00E6E0B9 /* CCButtonUse-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				868F32E91DCA38EC00E6E0B9 /* AppDelegate.swift */,
+				86A3C77E1DCA45DD004A028D /* ButtonUseView.swift */,
+				868F32EB1DCA38EC00E6E0B9 /* ViewController.swift */,
+				868F32FF1DCA3D6C00E6E0B9 /* CCUtil */,
+				868F32F01DCA38EC00E6E0B9 /* Assets.xcassets */,
+				868F32F21DCA38EC00E6E0B9 /* LaunchScreen.storyboard */,
+				868F32F51DCA38EC00E6E0B9 /* Info.plist */,
+			);
+			path = "CCButtonUse-Swift";
+			sourceTree = "<group>";
+		};
+		868F32FF1DCA3D6C00E6E0B9 /* CCUtil */ = {
+			isa = PBXGroup;
+			children = (
+				868F33011DCA3D6C00E6E0B9 /* Const.swift */,
+				868F33021DCA3D6C00E6E0B9 /* Extension.swift */,
+			);
+			path = CCUtil;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		865FC6821D635D310029F5D9 /* CCButtonUse-Swift */ = {
+		868F32E51DCA38EC00E6E0B9 /* CCButtonUse-Swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 865FC6951D635D310029F5D9 /* Build configuration list for PBXNativeTarget "CCButtonUse-Swift" */;
+			buildConfigurationList = 868F32F81DCA38EC00E6E0B9 /* Build configuration list for PBXNativeTarget "CCButtonUse-Swift" */;
 			buildPhases = (
-				1758F9005DF1F8BF2B62AB42 /* [CP] Check Pods Manifest.lock */,
-				865FC67F1D635D310029F5D9 /* Sources */,
-				865FC6801D635D310029F5D9 /* Frameworks */,
-				865FC6811D635D310029F5D9 /* Resources */,
-				19FEE12C50A883539DE9066B /* [CP] Embed Pods Frameworks */,
-				0C9C92A276551951A2DE061A /* [CP] Copy Pods Resources */,
+				37A787D9D8437F126F89116B /* [CP] Check Pods Manifest.lock */,
+				868F32E21DCA38EC00E6E0B9 /* Sources */,
+				868F32E31DCA38EC00E6E0B9 /* Frameworks */,
+				868F32E41DCA38EC00E6E0B9 /* Resources */,
+				32936CAD37715EB14F0C0859 /* [CP] Embed Pods Frameworks */,
+				13121BB71FA88E5E48A420A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,27 +123,28 @@
 			);
 			name = "CCButtonUse-Swift";
 			productName = "CCButtonUse-Swift";
-			productReference = 865FC6831D635D310029F5D9 /* CCButtonUse-Swift.app */;
+			productReference = 868F32E61DCA38EC00E6E0B9 /* CCButtonUse-Swift.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		865FC67B1D635D310029F5D9 /* Project object */ = {
+		868F32DE1DCA38EC00E6E0B9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Chen Chen";
 				TargetAttributes = {
-					865FC6821D635D310029F5D9 = {
-						CreatedOnToolsVersion = 7.3.1;
+					868F32E51DCA38EC00E6E0B9 = {
+						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 72SC2S8T6M;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 865FC67E1D635D310029F5D9 /* Build configuration list for PBXProject "CCButtonUse-Swift" */;
+			buildConfigurationList = 868F32E11DCA38EC00E6E0B9 /* Build configuration list for PBXProject "CCButtonUse-Swift" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -153,30 +152,30 @@
 				en,
 				Base,
 			);
-			mainGroup = 865FC67A1D635D310029F5D9;
-			productRefGroup = 865FC6841D635D310029F5D9 /* Products */;
+			mainGroup = 868F32DD1DCA38EC00E6E0B9;
+			productRefGroup = 868F32E71DCA38EC00E6E0B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				865FC6821D635D310029F5D9 /* CCButtonUse-Swift */,
+				868F32E51DCA38EC00E6E0B9 /* CCButtonUse-Swift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		865FC6811D635D310029F5D9 /* Resources */ = {
+		868F32E41DCA38EC00E6E0B9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				865FC6911D635D310029F5D9 /* LaunchScreen.storyboard in Resources */,
-				865FC68E1D635D310029F5D9 /* Assets.xcassets in Resources */,
+				868F32F41DCA38EC00E6E0B9 /* LaunchScreen.storyboard in Resources */,
+				868F32F11DCA38EC00E6E0B9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C9C92A276551951A2DE061A /* [CP] Copy Pods Resources */ = {
+		13121BB71FA88E5E48A420A6 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -191,22 +190,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CCButtonUse-Swift/Pods-CCButtonUse-Swift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1758F9005DF1F8BF2B62AB42 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		19FEE12C50A883539DE9066B /* [CP] Embed Pods Frameworks */ = {
+		32936CAD37715EB14F0C0859 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -221,29 +205,44 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CCButtonUse-Swift/Pods-CCButtonUse-Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		37A787D9D8437F126F89116B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		865FC67F1D635D310029F5D9 /* Sources */ = {
+		868F32E21DCA38EC00E6E0B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				865FC6C31D635F560029F5D9 /* ButtonUseView.swift in Sources */,
-				86A557911D8C5B4F00965D08 /* Color.swift in Sources */,
-				865FC6891D635D310029F5D9 /* ViewController.swift in Sources */,
-				86A557931D8C5B4F00965D08 /* Extension.swift in Sources */,
-				865FC6871D635D310029F5D9 /* AppDelegate.swift in Sources */,
-				86A557921D8C5B4F00965D08 /* Const.swift in Sources */,
+				86A3C77F1DCA45DD004A028D /* ButtonUseView.swift in Sources */,
+				868F33051DCA3D6C00E6E0B9 /* Extension.swift in Sources */,
+				868F32EC1DCA38EC00E6E0B9 /* ViewController.swift in Sources */,
+				868F33041DCA3D6C00E6E0B9 /* Const.swift in Sources */,
+				868F32EA1DCA38EC00E6E0B9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		865FC68F1D635D310029F5D9 /* LaunchScreen.storyboard */ = {
+		868F32F21DCA38EC00E6E0B9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				865FC6901D635D310029F5D9 /* Base */,
+				868F32F31DCA38EC00E6E0B9 /* Base */,
+				868F33061DCA3DD200E6E0B9 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -251,10 +250,11 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		865FC6931D635D310029F5D9 /* Debug */ = {
+		868F32F61DCA38EC00E6E0B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -263,12 +263,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -290,18 +291,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		865FC6941D635D310029F5D9 /* Release */ = {
+		868F32F71DCA38EC00E6E0B9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -310,12 +313,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -331,7 +335,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -339,13 +343,14 @@
 			};
 			name = Release;
 		};
-		865FC6961D635D310029F5D9 /* Debug */ = {
+		868F32F91DCA38EC00E6E0B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0CFFD3FF35510B2857015176 /* Pods-CCButtonUse-Swift.debug.xcconfig */;
+			baseConfigurationReference = A1B1B42923C5502786B8B2BA /* Pods-CCButtonUse-Swift.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 72SC2S8T6M;
 				INFOPLIST_FILE = "CCButtonUse-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chenchen.CCButtonUse-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,13 +358,14 @@
 			};
 			name = Debug;
 		};
-		865FC6971D635D310029F5D9 /* Release */ = {
+		868F32FA1DCA38EC00E6E0B9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2C4B411C6549533129A3582 /* Pods-CCButtonUse-Swift.release.xcconfig */;
+			baseConfigurationReference = 09CEB3EFFCC0F95AB4C79007 /* Pods-CCButtonUse-Swift.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 72SC2S8T6M;
 				INFOPLIST_FILE = "CCButtonUse-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chenchen.CCButtonUse-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -370,25 +376,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		865FC67E1D635D310029F5D9 /* Build configuration list for PBXProject "CCButtonUse-Swift" */ = {
+		868F32E11DCA38EC00E6E0B9 /* Build configuration list for PBXProject "CCButtonUse-Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				865FC6931D635D310029F5D9 /* Debug */,
-				865FC6941D635D310029F5D9 /* Release */,
+				868F32F61DCA38EC00E6E0B9 /* Debug */,
+				868F32F71DCA38EC00E6E0B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		865FC6951D635D310029F5D9 /* Build configuration list for PBXNativeTarget "CCButtonUse-Swift" */ = {
+		868F32F81DCA38EC00E6E0B9 /* Build configuration list for PBXNativeTarget "CCButtonUse-Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				865FC6961D635D310029F5D9 /* Debug */,
-				865FC6971D635D310029F5D9 /* Release */,
+				868F32F91DCA38EC00E6E0B9 /* Debug */,
+				868F32FA1DCA38EC00E6E0B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 865FC67B1D635D310029F5D9 /* Project object */;
+	rootObject = 868F32DE1DCA38EC00E6E0B9 /* Project object */;
 }
