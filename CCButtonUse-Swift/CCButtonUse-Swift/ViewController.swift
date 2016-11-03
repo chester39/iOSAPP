@@ -28,7 +28,7 @@ enum kButtonType: Int {
 
 class ViewController: UIViewController {
 
-    /// 加法计算视图
+    /// 按钮使用视图
     var buttonUseView = ButtonUseView(frame: kScreenFrame)
     
     // MARK: - 系统方法
@@ -49,8 +49,8 @@ class ViewController: UIViewController {
         buttonUseView.leftRotateButton.addTarget(self, action: #selector(rotateButtonDidClick(button:)), for: .touchUpInside)
         buttonUseView.rightRotateButton.addTarget(self, action: #selector(rotateButtonDidClick(button:)), for: .touchUpInside)
         
-        buttonUseView.plusButton.addTarget(self, action: #selector(changeButtonDidClick(button:)), for: .touchUpInside)
-        buttonUseView.minusButton.addTarget(self, action: #selector(changeButtonDidClick(button:)), for: .touchUpInside)
+        buttonUseView.plusButton.addTarget(self, action: #selector(scalingButtonDidClick(button:)), for: .touchUpInside)
+        buttonUseView.minusButton.addTarget(self, action: #selector(scalingButtonDidClick(button:)), for: .touchUpInside)
     }
     
     // MARK: - 界面方法
@@ -98,7 +98,7 @@ class ViewController: UIViewController {
     /**
      改变按钮点击方法
      */
-    func changeButtonDidClick(button: UIButton) {
+    func scalingButtonDidClick(button: UIButton) {
         
         UIView.animate(withDuration: 1.0, animations: {
             switch button.tag {

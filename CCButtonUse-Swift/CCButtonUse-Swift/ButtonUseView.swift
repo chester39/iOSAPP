@@ -121,26 +121,26 @@ class ButtonUseView: UIView {
         let buttonY: CGFloat = kViewAdapter
         imageButton.frame = CGRect(x: buttonX, y: buttonY, width: buttonWidth, height: buttonHeight)
         
-        constrain(topButton, bottomButton, leftButton, rightButton) { (topButton, bottomButton, leftButton, rightButton) in
-            topButton.width == kViewAdapter
-            topButton.height == kViewAdapter
-            topButton.top == topButton.superview!.top + 300
-            topButton.left == leftButton.right
+        constrain([topButton, bottomButton, leftButton, rightButton]) { (buttons) in
+            buttons[0].width == kViewAdapter
+            buttons[0].height == kViewAdapter
+            buttons[0].top == buttons[0].superview!.top + 300
+            buttons[0].left == buttons[2].right
             
-            bottomButton.width == topButton.width
-            bottomButton.height == topButton.height
-            bottomButton.centerX == topButton.centerX
-            bottomButton.top == leftButton.bottom
+            buttons[1].width == buttons[0].width
+            buttons[1].height == buttons[0].height
+            buttons[1].centerX == buttons[0].centerX
+            buttons[1].top == buttons[2].bottom
             
-            leftButton.width == bottomButton.width
-            leftButton.height == bottomButton.height
-            leftButton.left == leftButton.superview!.left + kViewBorder
-            leftButton.top == topButton.bottom
+            buttons[2].width == buttons[1].width
+            buttons[2].height == buttons[1].height
+            buttons[2].left == buttons[2].superview!.left + kViewBorder
+            buttons[2].top == buttons[0].bottom
             
-            rightButton.width == leftButton.width
-            rightButton.height == leftButton.height
-            rightButton.centerY == leftButton.centerY
-            rightButton.left == topButton.right
+            buttons[3].width == buttons[2].width
+            buttons[3].height == buttons[2].height
+            buttons[3].centerY == buttons[2].centerY
+            buttons[3].left == buttons[0].right
         }
         
         constrain(leftRotateButton, rightRotateButton) { (leftRotateButton, rightRotateButton) in

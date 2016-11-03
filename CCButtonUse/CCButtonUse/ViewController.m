@@ -53,7 +53,7 @@ static const CGFloat kMovingDistance = 10.0;
 /**
  *  移动图片方法
  */
-- (IBAction)moveImage:(UIButton *)button {
+- (IBAction)moveButtonDidClick:(UIButton *)button {
     
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:1.0];
@@ -84,42 +84,40 @@ static const CGFloat kMovingDistance = 10.0;
 /**
  *  旋转图片方法
  */
-- (IBAction)rotateImage:(UIButton *)button {
+- (IBAction)rotateButtonDidClick:(UIButton *)button {
     
-    switch (button.tag) {
-        case kButtonTypeLeftRotate:
-            self.imageButton.transform = CGAffineTransformRotate(self.imageButton.transform, -M_PI_4);
-            break;
-            
-        case kButtonTypeRightRotate:
-            self.imageButton.transform = CGAffineTransformRotate(self.imageButton.transform, M_PI_4);
-            break;
-    }
+
+    [UIView animateWithDuration:2.0 animations:^{
+        switch (button.tag) {
+            case kButtonTypeLeftRotate:
+                self.imageButton.transform = CGAffineTransformRotate(self.imageButton.transform, -M_PI_4);
+                break;
+                
+            case kButtonTypeRightRotate:
+                self.imageButton.transform = CGAffineTransformRotate(self.imageButton.transform, M_PI_4);
+                break;
+        }
+    }];
 }
 
 /**
  *  放缩图片方法
  */
-- (IBAction)changeImage:(UIButton *)button {
+- (IBAction)scalingButtonDidClick:(UIButton *)button {
     
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:2.0];
-    
-    CGRect tempBounds = self.imageButton.bounds;
-    switch (button.tag) {
-        case kButtonTypePlus:
-            tempBounds.size.width += kMovingDistance;
-            tempBounds.size.height += kMovingDistance;
-            break;
-            
-        case kButtonTypeMinus:
-            tempBounds.size.width -= kMovingDistance;
-            tempBounds.size.height -= kMovingDistance;
-            break;
-    }
-    
-    self.imageButton.bounds = tempBounds;
-    [UIView commitAnimations];
+    [UIView animateWithDuration:1.0 animations:^{
+        switch (button.tag) {
+            case kButtonTypePlus:
+                self.imageButton.transform = CGAffineTransformScale(self.imageButton.transform, 1.2, 1.2);
+                break;
+                
+            case kButtonTypeMinus:
+                self.imageButton.transform = CGAffineTransformScale(self.imageButton.transform, 0.8, 0.8);
+                break;
+        }
+    } completion:^(BOOL finished) {
+        NSLog(@"%d", finished);
+    }];
 }
 
 @end
