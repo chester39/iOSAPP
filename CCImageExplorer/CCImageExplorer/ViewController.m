@@ -8,37 +8,21 @@
 
 @interface ViewController ()
 
-/**
- *  图片视图
- */
+/// 图片视图
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-/**
- *  计数器标签
- */
+/// 计数器标签
 @property (weak, nonatomic) IBOutlet UILabel *numberLabel;
-/**
- *  标题标签
- */
+/// 标题标签
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-/**
- *  内容标签
- */
+/// 正文标签
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
-/**
- *  前一个按钮
- */
+/// 前一个按钮
 @property (weak, nonatomic) IBOutlet UIButton *previousButton;
-/**
- *  后一个按钮
- */
+/// 后一个按钮
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
-/**
- *  图片下标
- */
+/// 图片下标
 @property (assign, nonatomic) NSInteger index;
-/**
- *  图片数组
- */
+/// 图片数组
 @property (strong, nonatomic) NSArray *imageArray;
 
 @end
@@ -50,12 +34,13 @@
 /**
  *  图片数组惰性初始化方法
  */
-- (NSArray *)imageArray
-{
+- (NSArray *)imageArray {
+    
     if (_imageArray == nil) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"imageData" ofType:@"plist"];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"ImageData" ofType:@"plist"];
         _imageArray = [NSArray arrayWithContentsOfFile:path];
     }
+    
     return _imageArray;
 }
 
@@ -64,9 +49,10 @@
 /**
  *  视图已经加载方法
  */
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
+    
     [super viewDidLoad];
+    
     [self changeImage];
 }
 
@@ -75,26 +61,30 @@
 /**
  *  改变图片方法
  */
-- (void)changeImage
-{
+- (void)changeImage {
+    
     self.numberLabel.text = [NSString stringWithFormat:@"%ld/%ld", self.index + 1, self.imageArray.count];
     NSDictionary *imageDict = self.imageArray[self.index];
     self.imageView.image = [UIImage imageNamed:imageDict[@"no"]];
     self.titleLabel.text = imageDict[@"title"];
     self.textLabel.text = imageDict[@"text"];
+    
     self.previousButton.enabled = (self.index != 0);
     self.nextButton.enabled = (self.index != self.imageArray.count - 1);
 }
 
 /**
- *  移动图片方法
+ *  移动按钮点击方法
  */
-- (IBAction)moveImage:(id)sender
-{
-    if (sender == self.previousButton)
-        self.index--;
-    else if (sender == self.nextButton)
-        self.index++;
+- (IBAction)moveButtonDidClick:(UIButton *)button {
+    
+    if (button == self.previousButton) {
+        self.index -= 1;
+        
+    } else if (button == self.nextButton) {
+        self.index += 1;
+    }
+    
     [self changeImage];
 }
 

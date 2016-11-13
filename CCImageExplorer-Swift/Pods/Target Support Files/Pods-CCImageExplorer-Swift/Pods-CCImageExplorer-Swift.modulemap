@@ -1,0 +1,6 @@
+framework module Pods_CCImageExplorer_Swift {
+  umbrella header "Pods-CCImageExplorer-Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

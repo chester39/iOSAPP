@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     /**
      加法计算方法
      */
-    func addCounter() {
+    @objc fileprivate func addCounter() {
 
         let a: Int = Int(addCounterView.numberA.text!) ?? 0
         let b: Int = Int(addCounterView.numberB.text!) ?? 0

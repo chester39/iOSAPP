@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     /**
      移动按钮点击方法
      */
-    func moveButtonDidClick(button: UIButton) {
+    @objc fileprivate func moveButtonDidClick(button: UIButton) {
         
         UIView.beginAnimations(nil, context: nil)
         UIView.setAnimationDuration(1.0)
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
     /**
      旋转按钮点击方法
      */
-    func rotateButtonDidClick(button: UIButton) {
+    @objc fileprivate func rotateButtonDidClick(button: UIButton) {
         
         UIView.animate(withDuration: 2.0) {
             switch button.tag {
@@ -98,7 +98,7 @@ class ViewController: UIViewController {
     /**
      改变按钮点击方法
      */
-    func scalingButtonDidClick(button: UIButton) {
+    @objc fileprivate func scalingButtonDidClick(button: UIButton) {
         
         UIView.animate(withDuration: 1.0, animations: {
             switch button.tag {

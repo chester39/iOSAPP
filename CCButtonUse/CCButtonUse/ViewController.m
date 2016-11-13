@@ -31,7 +31,7 @@ static const CGFloat kMovingDistance = 10.0;
 
 @interface ViewController ()
 
-/// 头像照片
+/// 头像按钮
 @property (weak, nonatomic) IBOutlet UIButton *imageButton;
 
 @end
@@ -85,7 +85,6 @@ static const CGFloat kMovingDistance = 10.0;
  *  旋转图片方法
  */
 - (IBAction)rotateButtonDidClick:(UIButton *)button {
-    
 
     [UIView animateWithDuration:2.0 animations:^{
         switch (button.tag) {
