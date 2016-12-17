@@ -55,7 +55,7 @@ class ButtonUseView: UIView {
     /**
      初始化界面方法
      */
-    fileprivate func setupUI() {
+    private func setupUI() {
         
         imageButton.setBackgroundImage(UIImage(named: "Image_front"), for: .normal)
         imageButton.setBackgroundImage(UIImage(named: "Image_back"), for: .highlighted)
@@ -113,7 +113,7 @@ class ButtonUseView: UIView {
     /**
      初始化约束方法
      */
-    fileprivate func setupConstraints() {
+    private func setupConstraints() {
         
         let buttonWidth: CGFloat = 300
         let buttonHeight: CGFloat = 200
@@ -121,7 +121,7 @@ class ButtonUseView: UIView {
         let buttonY: CGFloat = kViewAdapter
         imageButton.frame = CGRect(x: buttonX, y: buttonY, width: buttonWidth, height: buttonHeight)
         
-        constrain([topButton, bottomButton, leftButton, rightButton]) { (buttons) in
+        constrain([topButton, bottomButton, leftButton, rightButton]) { buttons in
             buttons[0].width == kViewAdapter
             buttons[0].height == kViewAdapter
             buttons[0].top == buttons[0].superview!.top + 300
@@ -143,7 +143,7 @@ class ButtonUseView: UIView {
             buttons[3].left == buttons[0].right
         }
         
-        constrain(leftRotateButton, rightRotateButton) { (leftRotateButton, rightRotateButton) in
+        constrain(leftRotateButton, rightRotateButton) { leftRotateButton, rightRotateButton in
             leftRotateButton.width == kViewAdapter
             leftRotateButton.height == kViewAdapter
             leftRotateButton.top == leftRotateButton.superview!.top + 300
@@ -155,7 +155,7 @@ class ButtonUseView: UIView {
             rightRotateButton.left == leftRotateButton.right + kViewBorder
         }
         
-        constrain(plusButton, minusButton) { (plusButton, minusButton) in
+        constrain(plusButton, minusButton) { plusButton, minusButton in
             plusButton.width == kViewAdapter
             plusButton.height == kViewAdapter
             plusButton.top == plusButton.superview!.top + 400

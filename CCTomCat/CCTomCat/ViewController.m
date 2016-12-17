@@ -1,6 +1,6 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
+//	ViewController.m
+//		CCTomCat
 //		Chen Chen @ Apirl 14th, 2015
 //
 
@@ -8,10 +8,8 @@
 
 @interface ViewController ()
 
-/**
- *  汤姆猫视图
- */
-@property (weak, nonatomic) IBOutlet UIImageView *catTom;
+/// 汤姆猫图片视图
+@property (weak, nonatomic) IBOutlet UIImageView *tomCat;
 
 @end
 
@@ -19,8 +17,11 @@
 
 #pragma mark - 系统方法
 
-- (void)viewDidLoad
-{
+/**
+ *  视图已经加载方法
+ */
+- (void)viewDidLoad {
+    
     [super viewDidLoad];
 }
 
@@ -29,10 +30,12 @@
 /**
  *  连续帧动画方法
  */
-- (void)runAnimationWithCount:(int)count name:(NSString *)name
-{
-    if (self.catTom.isAnimating)
+- (void)runAnimationWithCount:(int)count name:(NSString *)name {
+    
+    if (self.tomCat.isAnimating) {
         return;
+    }
+    
     NSMutableArray *imageArray = [NSMutableArray array];
     for (int i = 0; i < count; ++i) {
         NSString *filename = [NSString stringWithFormat:@"%@_%02d", name, i];
@@ -40,102 +43,104 @@
         UIImage *image = [UIImage imageWithContentsOfFile:path];
         [imageArray addObject:image];
     }
-    self.catTom.animationImages = imageArray;
-    self.catTom.animationRepeatCount = 1;
-    self.catTom.animationDuration = imageArray.count * 0.05;
-    [self.catTom startAnimating];
-    CGFloat delay = self.catTom.animationDuration + 1.0;
-    [self.catTom performSelector:@selector(setAnimationImages:) withObject:nil afterDelay:delay];
+    
+    self.tomCat.animationImages = imageArray;
+    self.tomCat.animationRepeatCount = 1;
+    self.tomCat.animationDuration = imageArray.count * 0.05;
+    [self.tomCat startAnimating];
+    
+    CGFloat delay = self.tomCat.animationDuration + 1.0;
+    [self.tomCat performSelector:@selector(setAnimationImages:) withObject:nil afterDelay:delay];
 }
 
 #pragma mark - 动作方法
 
 /**
- *  喝水方法
+ *  吃饭按钮点击方法
  */
-- (IBAction)drinkTom
-{
-    [self runAnimationWithCount:81 name:@"drink"];
-}
-
-/**
- *  铜钹方法
- */
-- (IBAction)cymbalTom
-{
-    [self runAnimationWithCount:12 name:@"cymbal"];
-}
-
-/**
- *  吃饭方法
- */
-- (IBAction)eatTom
-{
+- (IBAction)eatButtonDidClick {
+    
     [self runAnimationWithCount:39 name:@"eat"];
 }
 
 /**
- *  放屁方法
+ *  铜钹按钮点击方法
  */
-- (IBAction)fartTom
-{
+- (IBAction)cymbalButtonDidClick {
+    
+    [self runAnimationWithCount:12 name:@"cymbal"];
+}
+
+/**
+ *  喝水按钮点击方法
+ */
+- (IBAction)drinkButtonDidClick {
+    
+    [self runAnimationWithCount:80 name:@"drink"];
+}
+
+/**
+ *  放屁按钮点击方法
+ */
+- (IBAction)fartButtonDidClick {
+    
     [self runAnimationWithCount:27 name:@"fart"];
 }
 
 /**
- *  扔饼方法
+ *  扔饼按钮点击方法
  */
-- (IBAction)pieTom
-{
+- (IBAction)pieButtonDidClick {
+    
     [self runAnimationWithCount:23 name:@"pie"];
 }
 
 /**
- *  抓屏方法
+ *  抓屏按钮点击方法
  */
-- (IBAction)scratchTom
-{
+- (IBAction)scratchButtonDidClick {
+    
     [self runAnimationWithCount:55 name:@"scratch"];
 }
 
 /**
- *  打头方法
+ *  打头按钮点击方法
  */
-- (IBAction)headTom
-{
+- (IBAction)headButtonDidClick {
+    
     [self runAnimationWithCount:80 name:@"knockout"];
 }
 
 /**
- *  生气方法
+ *  生气按钮点击方法
  */
-- (IBAction)angryTom
-{
+- (IBAction)angryButtonDidClick {
+    
     [self runAnimationWithCount:25 name:@"angry"];
 }
 
 /**
- *  打胃方法
+ *  打胃按钮点击方法
  */
-- (IBAction)stomachTom
-{
+- (IBAction)stomachButtonDidClick {
+    
     [self runAnimationWithCount:33 name:@"stomach"];
 }
 
 /**
- *  左脚方法
+ *  左脚按钮点击方法
  */
-- (IBAction)leftfootTom
-{
-    [self runAnimationWithCount:29 name:@"footRight"];
+- (IBAction)leftFootButtonDidClick {
+    
+    [self runAnimationWithCount:29 name:@"footLeft"];
 }
 
 /**
- *  右脚方法
+ *  右脚按钮点击方法
  */
-- (IBAction)rightfootTom
-{
-    [self runAnimationWithCount:29 name:@"footLeft"];
+- (IBAction)rightFootButtonDidClick {
+    
+    [self runAnimationWithCount:29 name:@"footRight"];
 }
 
 @end

@@ -1,7 +1,7 @@
 //
 //	Const.swift
-//		CCUtil
-//		Chen Chen @ August 11th, 2016
+//      CCUtil
+//		Chen Chen @ November 15th, 2016
 //
 
 import Foundation

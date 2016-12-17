@@ -114,6 +114,7 @@ static const CGFloat kMovingDistance = 10.0;
                 self.imageButton.transform = CGAffineTransformScale(self.imageButton.transform, 0.8, 0.8);
                 break;
         }
+        
     } completion:^(BOOL finished) {
         NSLog(@"%d", finished);
     }];

@@ -49,7 +49,7 @@ class ImageExplorerView: UIView {
     /**
      初始化界面方法
      */
-    fileprivate func setupUI() {
+    private func setupUI() {
         
         addSubview(numberLabel)
         addSubview(titleLabel)
@@ -73,9 +73,9 @@ class ImageExplorerView: UIView {
     /**
      初始化约束方法
      */
-    fileprivate func setupConstraints() {
+    private func setupConstraints() {
         
-        constrain(numberLabel, titleLabel) { (numberLabel, titleLabel) in
+        constrain(numberLabel, titleLabel) { numberLabel, titleLabel in
             numberLabel.centerX == numberLabel.superview!.centerX
             numberLabel.top == numberLabel.superview!.top + kViewBorder
             
@@ -83,7 +83,7 @@ class ImageExplorerView: UIView {
             titleLabel.top == numberLabel.bottom + kViewBorder
         }
         
-        constrain(imageView, textLabel) { (imageView, textLabel) in
+        constrain(imageView, textLabel) { imageView, textLabel in
             imageView.width == 200
             imageView.height == 350
             imageView.centerX == imageView.superview!.centerX
@@ -95,7 +95,7 @@ class ImageExplorerView: UIView {
             textLabel.right == textLabel.superview!.right - kViewBorder
         }
         
-        constrain(previousButton, nextButton) { (previousButton, nextButton) in
+        constrain(previousButton, nextButton) { previousButton, nextButton in
             previousButton.width == kViewAdapter
             previousButton.height == kViewAdapter
             previousButton.centerY == previousButton.superview!.centerY

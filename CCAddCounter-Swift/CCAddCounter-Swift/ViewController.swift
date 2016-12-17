@@ -9,7 +9,7 @@ import UIKit
 class ViewController: UIViewController {
 
     /// 加法计算视图
-    var addCounterView = AddCounterView(frame: kScreenFrame)
+    private var addCounterView = AddCounterView(frame: kScreenFrame)
 
     // MARK: - 系统方法
 
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     /**
      加法计算方法
      */
-    @objc fileprivate func addCounter() {
+    @objc private func addCounter() {
 
         let a: Int = Int(addCounterView.numberA.text!) ?? 0
         let b: Int = Int(addCounterView.numberB.text!) ?? 0

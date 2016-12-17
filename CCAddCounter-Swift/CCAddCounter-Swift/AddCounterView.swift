@@ -13,11 +13,11 @@ class AddCounterView: UIView {
     /// 加数文本框
     var numberA = UITextField()
     /// 加号标签
-    fileprivate var plusSign = UILabel(text: "+", fontSize: 17, lines: 1)
+    private var plusSign = UILabel(text: "+", fontSize: 17, lines: 1)
     /// 被加数文本框
     var numberB = UITextField()
     /// 等号标签
-    fileprivate var equalSign = UILabel(text: "=", fontSize: 17, lines: 1)
+    private var equalSign = UILabel(text: "=", fontSize: 17, lines: 1)
     /// 加法和标签
     var sumAnswer = UILabel(text: "0", fontSize: 17, lines: 0)
     /// 加法按钮
@@ -49,7 +49,7 @@ class AddCounterView: UIView {
     /**
      初始化界面方法
      */
-    fileprivate func setupUI() {
+    private func setupUI() {
 
         numberA.placeholder = "数字A"
         numberA.borderStyle = .roundedRect
@@ -76,9 +76,9 @@ class AddCounterView: UIView {
     /**
      初始化约束方法
      */
-    fileprivate func setupConstraints() {
+    private func setupConstraints() {
 
-        constrain(numberA, plusSign, numberB) { (numberA, plusSign, numberB) in
+        constrain(numberA, plusSign, numberB) { numberA, plusSign, numberB in
             numberA.width == kViewAdapter
             numberA.height == kViewMargin
             numberA.top == numberA.superview!.top + kViewStandard
@@ -94,7 +94,7 @@ class AddCounterView: UIView {
             distribute(by: kViewBorder, leftToRight: numberA, plusSign, numberB)
         }
 
-        constrain(sumAnswer, equalSign) { (sumAnswer, equalSign) in
+        constrain(sumAnswer, equalSign) { sumAnswer, equalSign in
             sumAnswer.width == kViewAdapter
             sumAnswer.height == kViewMargin
             sumAnswer.top == sumAnswer.superview!.top + kViewStandard
@@ -107,7 +107,7 @@ class AddCounterView: UIView {
             distribute(by: kViewBorder, leftToRight: equalSign, sumAnswer)
         }
 
-        constrain(addButton) { (addButton) in
+        constrain(addButton) { addButton in
             addButton.width == kViewStandard
             addButton.height == kViewAdapter
             addButton.center == addButton.superview!.center

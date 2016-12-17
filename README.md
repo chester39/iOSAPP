@@ -1,7 +1,7 @@
 # iOS App
 ## By Chester Chen
 ## Some iOS App by Chester Chen, learning from the videos of Itcast Inc.
-## July 18th, 2016 - November 14th, 2016
+## July 18th, 2016 - December 17th, 2016
 
 ### Contents
 
@@ -9,9 +9,10 @@
 - [App 1.2 加法计算器](CCAddCounter-Swift) *made by code and Swift*
 - [App 2.1 按钮使用](CCButtonUse) *made by storyboard and Objective-C*
 - [App 2.2 按钮使用](CCButtonUse-Swift) *made by code and Swift*
-- [App 3.1. 图片浏览器](CCImageExplorer) *made by storyboard and Objective-C*
-- [App 3.2 按钮使用](CCImageExplorer-Swift) *made by code and Swift*
-- [App 4. 汤姆猫](CCTomCat)
+- [App 3.1 图片浏览器](CCImageExplorer) *made by storyboard and Objective-C*
+- [App 3.2 图片浏览器](CCImageExplorer-Swift) *made by code and Swift*
+- [App 4.1 汤姆猫](CCTomCat) *made by storyboard and Objective-C*
+- [App 4.2 汤姆猫](CCTomCat-Swift) *made by code and Swift*
 - [App 5. 应用管理](CCAppControl)
 - [App 6. 超级猜图](CCFigureGuess)
 - [App 7. 听书阅读器](CCDictionReader)

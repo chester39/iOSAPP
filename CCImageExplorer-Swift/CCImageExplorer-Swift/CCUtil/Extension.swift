@@ -1,7 +1,7 @@
 //
 //	Extension.swift
-//		CCUtil
-//		Chen Chen @ July 25th, 2016
+//      CCUtil
+//		Chen Chen @ November 15th, 2016
 //
 
 import Foundation
@@ -12,7 +12,7 @@ extension Date {
     /**
      字符串创建日期方法
      */
-    static func convertStringToDate(_ timeString: String, formatterString: String) -> Date  {
+    static func convertStringToDate(timeString: String, formatterString: String) -> Date  {
 
         let formatter = DateFormatter()
         formatter.dateFormat = formatterString
@@ -24,7 +24,7 @@ extension Date {
     /**
      格式化字符串方法
      */
-    static func formatDateToString(_ date: Date) -> String {
+    static func formatDateToString(date: Date) -> String {
 
         let dateFormatter = DateFormatter()
         let nowDate = Date()
@@ -179,7 +179,7 @@ extension UIImage {
     /**
      图片染色方法
      */
-    func tintImageWithColor(_ color: UIColor, alpha: CGFloat) -> UIImage {
+    func tintImageWithColor(color: UIColor, alpha: CGFloat) -> UIImage {
 
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         UIGraphicsBeginImageContextWithOptions(rect.size, true, scale)
@@ -201,7 +201,7 @@ extension UIImage {
     /**
      重叠图片方法
      */
-    func overlapImageWithColor(_ color: UIColor) -> UIImage {
+    func overlapImageWithColor(color: UIColor) -> UIImage {
 
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
 
@@ -233,8 +233,8 @@ extension UILabel {
         self.init()
 
         self.text = text
-        self.font = UIFont.systemFont(ofSize: fontSize)
-        self.numberOfLines = lines
+        font = UIFont.systemFont(ofSize: fontSize)
+        numberOfLines = lines
     }
 
 }
@@ -291,7 +291,7 @@ extension UIWindow {
     /**
      判断是否浅色方法
      */
-    class func isLightColor(_ string: String) -> Bool {
+    class func isLightColor(string: String) -> Bool {
 
         let redString = (string as NSString).substring(with: NSRange(location: 1, length: 2))
         let greenString = (string as NSString).substring(with: NSRange(location: 3, length: 2))

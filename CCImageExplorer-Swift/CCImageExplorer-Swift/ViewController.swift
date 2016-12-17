@@ -11,9 +11,9 @@ import SwiftyJSON
 class ViewController: UIViewController {
 
     /// 图片浏览视图
-    var imageExplorerView = ImageExplorerView(frame: kScreenFrame)
+    private var imageExplorerView = ImageExplorerView(frame: kScreenFrame)
     /// 图片下标
-    var index: Int = 0
+    private var index: Int = 0
     /// 图片数组
     private var imageArray: [[String: Any]] = {
         var array = [[String: Any]]()
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
     /**
      改变图片方法
      */
-    fileprivate func changeImage() {
+    private func changeImage() {
         
         imageExplorerView.numberLabel.text = String(format: "%d/%d", index + 1, imageArray.count)
         let imageDict = imageArray[index]
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
     /**
      移动按钮点击方法
      */
-    @objc fileprivate func moveButtonDidClick(button: UIButton) {
+    @objc private func moveButtonDidClick(button: UIButton) {
         
         if button == imageExplorerView.previousButton {
             index -= 1

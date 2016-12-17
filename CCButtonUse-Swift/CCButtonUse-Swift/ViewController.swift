@@ -29,7 +29,7 @@ enum kButtonType: Int {
 class ViewController: UIViewController {
 
     /// 按钮使用视图
-    var buttonUseView = ButtonUseView(frame: kScreenFrame)
+    private var buttonUseView = ButtonUseView(frame: kScreenFrame)
     
     // MARK: - 系统方法
     
@@ -58,19 +58,23 @@ class ViewController: UIViewController {
     /**
      移动按钮点击方法
      */
-    @objc fileprivate func moveButtonDidClick(button: UIButton) {
+    @objc private func moveButtonDidClick(button: UIButton) {
         
         UIView.beginAnimations(nil, context: nil)
         UIView.setAnimationDuration(1.0)
         switch button.tag {
         case kButtonType.top.rawValue:
             buttonUseView.imageButton.frame.origin.y -= kViewPadding
+            
         case kButtonType.bottom.rawValue:
             buttonUseView.imageButton.frame.origin.y += kViewPadding
+            
         case kButtonType.left.rawValue:
             buttonUseView.imageButton.frame.origin.x -= kViewPadding
+            
         case kButtonType.right.rawValue:
             buttonUseView.imageButton.frame.origin.x += kViewPadding
+            
         default:
             break
         }
@@ -81,14 +85,16 @@ class ViewController: UIViewController {
     /**
      旋转按钮点击方法
      */
-    @objc fileprivate func rotateButtonDidClick(button: UIButton) {
+    @objc private func rotateButtonDidClick(button: UIButton) {
         
         UIView.animate(withDuration: 2.0) {
             switch button.tag {
             case kButtonType.leftRotate.rawValue:
                 self.buttonUseView.imageButton.transform = self.buttonUseView.imageButton.transform.rotated(by: (CGFloat)(-M_PI_4))
+                
             case kButtonType.rightRotate.rawValue:
                 self.buttonUseView.imageButton.transform = self.buttonUseView.imageButton.transform.rotated(by: CGFloat(M_PI_4))
+                
             default:
                 break
             }
@@ -98,18 +104,21 @@ class ViewController: UIViewController {
     /**
      改变按钮点击方法
      */
-    @objc fileprivate func scalingButtonDidClick(button: UIButton) {
+    @objc private func scalingButtonDidClick(button: UIButton) {
         
         UIView.animate(withDuration: 1.0, animations: {
             switch button.tag {
             case kButtonType.plus.rawValue:
                 self.buttonUseView.imageButton.transform = self.buttonUseView.imageButton.transform.scaledBy(x: 1.2, y: 1.2)
+                
             case kButtonType.minus.rawValue:
                 self.buttonUseView.imageButton.transform = self.buttonUseView.imageButton.transform.scaledBy(x: 0.8, y: 0.8)
+                
             default:
                 break
             }
-        }) { (result) in
+            
+        }) { result in
             print(result)
         }
     }

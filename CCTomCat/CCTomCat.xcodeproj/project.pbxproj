@@ -967,7 +967,10 @@
 		862275251ADD3910000B1169 /* CCTomCat */ = {
 			isa = PBXGroup;
 			children = (
-				865FCAFE1B1CD0A300956ECC /* Classes */,
+				8622752A1ADD3910000B1169 /* AppDelegate.h */,
+				8622752B1ADD3910000B1169 /* AppDelegate.m */,
+				8622752D1ADD3910000B1169 /* ViewController.h */,
+				8622752E1ADD3910000B1169 /* ViewController.m */,
 				862275261ADD3910000B1169 /* Supporting Files */,
 			);
 			path = CCTomCat;
@@ -1539,33 +1542,6 @@
 				865D62FD1B10E664000EC2F0 /* stomach_33.jpg */,
 			);
 			path = Stomach;
-			sourceTree = "<group>";
-		};
-		865FCAFE1B1CD0A300956ECC /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				865FCB001B1CD0AF00956ECC /* Controllers */,
-				865FCAFF1B1CD0AA00956ECC /* Others */,
-			);
-			name = Classes;
-			sourceTree = "<group>";
-		};
-		865FCAFF1B1CD0AA00956ECC /* Others */ = {
-			isa = PBXGroup;
-			children = (
-				8622752A1ADD3910000B1169 /* AppDelegate.h */,
-				8622752B1ADD3910000B1169 /* AppDelegate.m */,
-			);
-			name = Others;
-			sourceTree = "<group>";
-		};
-		865FCB001B1CD0AF00956ECC /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				8622752D1ADD3910000B1169 /* ViewController.h */,
-				8622752E1ADD3910000B1169 /* ViewController.m */,
-			);
-			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

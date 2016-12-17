@@ -1,6 +1,6 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
+//	AppDelegate.h
+//		CCTomCat
 //		Chen Chen @ Apirl 14th, 2015
 //
 
