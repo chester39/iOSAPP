@@ -1,6 +1,6 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
+//	AppView.h
+//		CCAppControl
 //		Chen Chen @ Apirl 15th, 2015
 //
 
@@ -12,8 +12,8 @@
  *  自定义AppViewDelegate代理协议
  */
 @protocol AppViewDelegate <NSObject>
-@optional
 
+@optional
 /**
  *  点击下载按钮方法
  */
@@ -23,13 +23,9 @@
 
 @interface AppView : UIView
 
-/**
- *  应用模型
- */
+/// 应用模型
 @property (strong, nonatomic) AppModel *appModel;
-/**
- *  AppViewDelegate代理
- */
+/// AppViewDelegate代理
 @property (weak, nonatomic) id<AppViewDelegate> delegate;
 
 /**

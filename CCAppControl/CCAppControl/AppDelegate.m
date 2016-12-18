@@ -1,6 +1,6 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
+//	AppDelegate.m
+//		CCAppControl
 //		Chen Chen @ Apirl 15th, 2015
 //
 
@@ -12,34 +12,52 @@
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+/**
+ *  应用启动方法
+ */
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-
+/**
+ *  应用将要失去焦点方法
+ */
+- (void)applicationWillResignActive:(UIApplication *)application {
+    
+    NSLog(@"%s", __func__);
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-
+/**
+ *  应用已经进入后台方法
+ */
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    
+    NSLog(@"%s", __func__);
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-
+/**
+ *  应用将要进入前台方法
+ */
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    
+    NSLog(@"%s", __func__);
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-
+/**
+ *  应用已经成为焦点方法
+ */
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    
+    NSLog(@"%s", __func__);
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-
+/**
+ *  应用将要终止方法
+ */
+- (void)applicationWillTerminate:(UIApplication *)application {
+    
+    NSLog(@"%s", __func__);
 }
 
 @end

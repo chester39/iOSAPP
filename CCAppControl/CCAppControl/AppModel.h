@@ -1,6 +1,6 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
+//	AppModel.h
+//		CCAppControl
 //		Chen Chen @ Apirl 15th, 2015
 //
 
@@ -8,13 +8,9 @@
 
 @interface AppModel : NSObject
 
-/**
- *  图标
- */
+/// 图标
 @property (copy, nonatomic) NSString *icon;
-/**
- *  名称
- */
+/// 名称
 @property (copy, nonatomic) NSString *name;
 
 /**

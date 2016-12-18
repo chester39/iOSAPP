@@ -1,6 +1,6 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
+//	ViewController.h
+//		CCAppControl
 //		Chen Chen @ Apirl 15th, 2015
 //
 
