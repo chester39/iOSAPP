@@ -1,7 +1,7 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
-//		Chen Chen @ June 5th, 2015
+//  AppModel.h
+//      CCAppDownload
+//      Chen Chen @ June 5th, 2015
 //
 
 #import <Foundation/Foundation.h>

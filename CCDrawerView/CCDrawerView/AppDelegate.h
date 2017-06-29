@@ -1,7 +1,7 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
-//		Chen Chen @ July 6th, 2015
+//  AppDelegate.h
+//      CCDrawerView
+//      Chen Chen @ July 6th, 2015
 //
 
 #import <UIKit/UIKit.h>

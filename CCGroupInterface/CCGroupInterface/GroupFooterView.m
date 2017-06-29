@@ -1,7 +1,7 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
-//		Chen Chen @ Apirl 23rd, 2015
+//  GroupFooterView.m
+//      CCGroupInterface
+//      Chen Chen @ Apirl 23rd, 2015
 //
 
 #import "GroupFooterView.h"

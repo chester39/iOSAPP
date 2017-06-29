@@ -1,7 +1,7 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
-//		Chen Chen @ Apirl 22nd, 2015
+//  CarModel.m
+//      CCCarGroup
+//      Chen Chen @ Apirl 22nd, 2015
 //
 
 #import "CarModel.h"

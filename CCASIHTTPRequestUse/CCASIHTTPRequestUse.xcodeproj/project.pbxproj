@@ -560,6 +560,7 @@
 				8620B1F91B6D0A7A00E47499 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8620B1FA1B6D0A7A00E47499 /* Build configuration list for PBXNativeTarget "CCASIHTTPRequestUseTests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +569,7 @@
 				8620B1FC1B6D0A7A00E47499 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

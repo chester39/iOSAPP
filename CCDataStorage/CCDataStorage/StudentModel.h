@@ -1,7 +1,7 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
-//		Chen Chen @ June 13th, 2015
+//  StudentModel.h
+//      CCDataStorage
+//      Chen Chen @ June 13th, 2015
 //
 
 #import "PersonModel.h"

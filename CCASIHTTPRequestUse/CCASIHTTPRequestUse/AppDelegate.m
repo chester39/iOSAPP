@@ -1,7 +1,7 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
-//		Chen Chen @ August 1st, 2015
+//  AppDelegate.m
+//      CCASIHTTPRequestUse
+//      Chen Chen @ August 1st, 2015
 //
 
 #import "AppDelegate.h"

@@ -1,7 +1,7 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
-//		Chen Chen @ June 2nd, 2015
+//  WeiboModel.m
+//      CCWebInteraction
+//      Chen Chen @ June 2nd, 2015
 //
 
 #import "WeiboModel.h"

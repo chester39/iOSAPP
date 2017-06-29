@@ -1,7 +1,7 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
-//		Chen Chen @ July 2nd, 2015
+//  AppDelegate.h
+//      CCCoreAnimationUse
+//      Chen Chen @ July 2nd, 2015
 //
 
 #import <UIKit/UIKit.h>

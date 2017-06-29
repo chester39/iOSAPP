@@ -1,7 +1,7 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
-//		Chen Chen @ July 4th, 2015
+//  TurnplateView.m
+//      CCConstellationTurnplate
+//      Chen Chen @ July 4th, 2015
 //
 
 #import "TurnplateView.h"

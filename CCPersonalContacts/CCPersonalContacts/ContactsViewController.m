@@ -1,7 +1,7 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
-//		Chen Chen @ June 11th, 2015
+//  ContactsViewController.m
+//      CCPersonalContacts
+//      Chen Chen @ June 11th, 2015
 //
 
 #import "ContactsViewController.h"

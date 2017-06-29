@@ -1,7 +1,7 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
-//		Chen Chen @ July 29th, 2015
+//  ViewController.h
+//      CCFileUpload
+//      Chen Chen @ July 29th, 2015
 //
 
 #import <UIKit/UIKit.h>

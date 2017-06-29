@@ -1,7 +1,7 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
-//		Chen Chen @ July 21st, 2015
+//  ViewController.h
+//      CCHTTPRequest
+//      Chen Chen @ July 21st, 2015
 //
 
 #import <UIKit/UIKit.h>

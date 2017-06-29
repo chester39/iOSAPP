@@ -1,7 +1,7 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
-//		Chen Chen @ June 11th, 2015
+//  CCViewController.m
+//      CCNavigationUse
+//      Chen Chen @ June 11th, 2015
 //
 
 #import "CCViewController.h"

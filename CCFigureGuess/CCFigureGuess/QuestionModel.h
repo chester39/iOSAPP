@@ -1,7 +1,7 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
-//		Chen Chen @ June 1st, 2015
+//  QuestionModel.h
+//      CCFigureGuess
+//      Chen Chen @ June 1st, 2015
 //
 
 #import <Foundation/Foundation.h>

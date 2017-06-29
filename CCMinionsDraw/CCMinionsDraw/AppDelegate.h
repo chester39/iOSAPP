@@ -1,6 +1,6 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
+//	AppDelegate.h
+//		CCMinionsDraw
 //		Chen Chen @ June 17th, 2015
 //
 

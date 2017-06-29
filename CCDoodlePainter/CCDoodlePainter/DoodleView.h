@@ -1,9 +1,7 @@
 //
 //  DoodleView.h
-//  CCDoodlePainter
-//
-//  Created by sogou on 15/6/23.
-//  Copyright (c) 2015年 Chen Chen. All rights reserved.
+//      CCDoodlePainter
+//      Chen Chen @ June 23rd, 2015
 //
 
 #import <UIKit/UIKit.h>

@@ -1,7 +1,7 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
-//		Chen Chen @ June 7th, 2015
+//  ViewController.m
+//      CCRegisterInterface
+//      Chen Chen @ June 7th, 2015
 //
 
 #import "ViewController.h"

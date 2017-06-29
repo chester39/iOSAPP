@@ -1,7 +1,7 @@
 //
-//	iOS培训
-//		传智播客 & 黑马
-//		Chen Chen @ Apirl 23rd, 2015
+//  GroupModel.h
+//      CCGroupInterface
+//      Chen Chen @ Apirl 23rd, 2015
 //
 
 #import <Foundation/Foundation.h>
