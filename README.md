@@ -1,6 +1,6 @@
 # iOS App
 ## By Chester Chen
-## July 18th, 2016 - December 18th, 2016
+## July 18th, 2016 - June 29th, 2017
 
 ### Contents
 
